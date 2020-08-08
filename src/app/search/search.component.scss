@@ -1,0 +1,40 @@
+.tm_search{
+    position: fixed;
+    z-index: 1;
+    width: 81%;
+    text-align: center;
+    top: 0;
+    padding: 15px 0 5px;
+    background: rgba(7, 23, 55, 0.2);
+    box-shadow: 0px 4px 8px 3px rgba(7, 23, 55, 0.2);
+    .tm_form-group{
+        display: inline;
+        position: relative;
+        label{
+            position: absolute;
+            right: 50px;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0px;
+                top: 11px;
+                bottom: 0;
+                width: 25px;
+                height: 25px;
+                background-image: url('../../assets/icons/search-2.svg');
+                background-position: center;
+                background-size: cover;
+            }
+          
+        }
+        input{
+            height: 44px;
+            width: 75%;
+            border-radius: 20px;
+            border: 0;
+            outline: none;
+            padding: 0 40px;
+            box-shadow: 1px -3px 20px 1px rgba(0, 0, 0, 0.2);
+        }
+    }
+}

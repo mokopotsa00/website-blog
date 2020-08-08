@@ -10,8 +10,8 @@ import { BlogComponent } from './blog/blog.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 const appRoutes: Routes = [
-    { path: '', redirectTo: '/home', pathMatch:'full' },
-    { path: 'home', component: HomeComponent},
+    { path: '', component: HomeComponent},
+    { path: 'home', redirectTo: '/'},
     { path: 'about', component: AboutMeComponent },
     { path: 'skills', component: MySkillsComponent },
     { path: 'projects', component: ProjectsComponent },

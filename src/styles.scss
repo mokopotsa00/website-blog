@@ -1,9 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 /*@charset "utf-8";*/
 /*
-/*	Copyright (c) 2018 Marketify
-/*	Author: Marketify
-/*	This file is made for CURRENT TEMPLATE
+/*	Copyright (c) 2020 Thuso Mokopotsa
+/*	Author: Thuso Mokopotsa
 
 
 	01)  BASE
@@ -15,7 +14,6 @@
 	07)  TESTIMONIALS
 	08)  NEWS
 	09)  CONTACT
-	09)  CONTACT
 	10)  TO TOP
 	11)  PARTICLE HOMEPAGE
 	12)  RIPPLE HOMEPAGE
@@ -23,7 +21,7 @@
 	14)  MOBILE HEADER
     15)  MEDIA QUERIES (FOR SMALL DEVICES)
 
-
+	
 /*---------------------------------------------------*/
 /*	01)  BASE
 /*---------------------------------------------------*/
@@ -34,12 +32,22 @@ html {
 	margin: 0px
 }
 body{
-	font-family: "Open Sans";
-	font-size: 14px;
+	font-family: 'Noto Sans HK', sans-serif;
+	font-size: 16px;
 	line-height: 1.8;
 	letter-spacing: 0.5px;
 	word-wrap: break-word;
 	font-weight: 400;
+	background: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	outline: none;
+}
+h2{
+	font-weight: 500;
+	font-size: 30px;
 }
 svg{
 	fill: currentcolor;
@@ -138,6 +146,50 @@ img.svg{
 }
 .tm_preloader.loaded:before, 
 .tm_preloader.loaded:after{height: 0%;}
+
+.buttons_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.buttons_wrap ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.buttons_wrap ul li a span{
+	position: relative;
+	z-index: 2;
+}
+.buttons_wrap ul li a{
+	text-decoration: none;
+    color: #fff;
+    background-color: #E3872D;
+    font-weight: 600;
+    font-family: "Montserrat";
+    padding: 12px 35px;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;;
+}
+.buttons_wrap ul li a:before{
+	position: absolute;
+    content: "";
+    top: 0px;
+    height: 100%;
+    left: -25%;
+    width: 0%;
+    background-image: linear-gradient(190deg, #0c687b, #0a1937);
+    transform: skew(50deg);
+    transition-duration: .6s;
+    z-index: 1;
+}
+.buttons_wrap ul li a:hover:before{width: 180%;}
 
 /*---------------------------------------------------*/
 /*	02)  CONTENT
@@ -312,6 +364,9 @@ img.svg{
 	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
 			box-sizing: border-box; /* Opera/IE 8+ */
 }
+.rightpart_inner{
+	position: relative;
+}
 .tm_rightpart.full{padding-left: 0px;}
 .tm_rightpart.opened{padding-left: 0px;}
 .tm_rightpart .rightpart_inner{
@@ -402,7 +457,7 @@ img.svg{
 	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
 			box-sizing: border-box; /* Opera/IE 8+ */
 }
-// .tm_universal_box_wrap .overlay_image.hero{background-image: url(..//img/hero/2.jpg);}
+.tm_universal_box_wrap .overlay_image.hero{background-image: url('./assets/img/hero/2.jpg');}
 .tm_universal_box_wrap .overlay_color.hero{background-color: rgba(7,23,55,.8);}
 .tm_universal_box_wrap .content.hero{height: 100vh;}
 .tm_hero_header_wrap .inner_content{
@@ -738,6 +793,13 @@ img.svg{
 	margin: 0px;
 	list-style-type: none;
 }
+.tm_about_wrap{
+	.buttons_wrap ul li{
+		margin: 0px 30px 10px 0px;
+		float: left;
+	}
+	.buttons_wrap ul li:last-child{margin-right: 0px;}
+}
 .tm_about_wrap .about_short_contact_wrap ul li{
 	margin: 0px 0px 10px 0px;
 	width: 50%;
@@ -764,54 +826,6 @@ img.svg{
     transition: all .3s ease;
 }
 .tm_about_wrap .about_short_contact_wrap ul li a:hover{color: #BD0A0D;}
-.tm_about_wrap .buttons_wrap{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
-			box-sizing: border-box; /* Opera/IE 8+ */
-}
-.tm_about_wrap .buttons_wrap ul{
-	margin: 0px;
-	list-style-type: none;
-}
-.tm_about_wrap .buttons_wrap ul li{
-	margin: 0px 30px 10px 0px;
-	float: left;
-}
-.tm_about_wrap .buttons_wrap ul li:last-child{margin-right: 0px;}
-.tm_about_wrap .buttons_wrap ul li a span{
-	position: relative;
-	z-index: 2;
-}
-.tm_about_wrap .buttons_wrap ul li a{
-	text-decoration: none;
-    color: #fff;
-    background-color: #E3872D;
-    font-weight: 600;
-    font-family: "Montserrat";
-    padding: 12px 35px;
-    border-radius: 3px;
-    display: inline-block;
-    position: relative;
-    overflow: hidden;;
-}
-.tm_about_wrap .buttons_wrap ul li a:before{
-	position: absolute;
-    content: "";
-    top: 0px;
-    height: 100%;
-    left: -25%;
-    width: 0%;
-    background-image: linear-gradient(190deg, #0c687b, #0a1937);
-    transform: skew(50deg);
-    transition-duration: .6s;
-    z-index: 1;
-}
-.tm_about_wrap .buttons_wrap ul li a:hover:before{width: 180%;}
 .tm_skills_wrap,
 .tm_skills_wrap .inner_wrap{
 	width: 100%;
@@ -1385,7 +1399,7 @@ img.svg{
 	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
 			box-sizing: border-box; /* Opera/IE 8+ */
 }
-// .tm_universal_box_wrap .overlay_image.testimonial{background-image: url(..//img/hero/3.jpg);}
+.tm_universal_box_wrap .overlay_image.testimonial{background-image: url('./assets/img/hero/3.jpg');}
 .tm_universal_box_wrap .overlay_color.testimonial{background-color: rgba(7,23,55,.8);}
 .tm_universal_box_wrap .content.testimonial{padding: 82px 0px 90px 0px;}
 
@@ -1998,7 +2012,7 @@ img.svg{
 .tm_universal_box_wrap.particle{
 	height: 100vh;
 	position: relative;
-	// background-image: url(..//img/hero/2.jpg);
+	 background-image: url('./assets/img/hero/2.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -2022,7 +2036,7 @@ img.svg{
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	// background-image: url(..//img/hero/2.jpg);
+	 background-image: url('./assets/img/hero/2.jpg');
 	position: relative;
 }
 .tm_ripple_wrap .overlay{
@@ -2094,7 +2108,7 @@ img.svg{
 	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
 			box-sizing: border-box; /* Opera/IE 8+ */
 }
-// .tm_intro_universal_bg_wrap .bg_wrap .overlay_image.top{background-image: url(..//img/hero/2.jpg);}
+.tm_intro_universal_bg_wrap .bg_wrap .overlay_image.top{background-image: url('./assets/img/hero/2.jpg');}
 .tm_intro_universal_bg_wrap .bg_wrap .overlay_color.top{background-color: rgba(10,4,37,.85);}
 .tm_intro_universal_bg_wrap .content.top{height: 75vh;}
 .tm_intro_universal_bg_wrap .content.top .main_titles_wrap{
