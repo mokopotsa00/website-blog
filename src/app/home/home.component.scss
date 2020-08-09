@@ -42,7 +42,7 @@
     }
     .tm_3_block_wrap{
         padding-bottom: 40px;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
         .tm_3_block_col{
             width: 30%;
             margin: auto;
@@ -64,6 +64,12 @@
         }
     }
     .tm_home_team-work{
+        h2{
+            font-size: 34px;
+            span{
+                color: #E3872D  ;
+            }
+        }
         .tm_home_team-work-text{
             z-index: 2;
             color: #ffffff;
@@ -73,7 +79,7 @@
 }
 .tm_home__content.tm_home_img-bg{
     padding-bottom: 70px;
-    padding-top: 40px;
+    padding-top: 30px;
     background-image: url('../../assets/icons/sized1.png');
     background-repeat: no-repeat;
     background-size: cover;

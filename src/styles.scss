@@ -34,7 +34,7 @@ body{
 	font-family: 'Noto Sans HK', sans-serif;
 	font-size: 16px;
 	line-height: 1.8;
-	letter-spacing: 0.5px;
+	letter-spacing: 1px;
 	word-wrap: break-word;
 	font-weight: 400;
 	background: transparent;
@@ -47,6 +47,11 @@ body{
 h2{
 	font-weight: 500;
 	font-size: 30px;
+}
+input{
+	font-family: 'Noto Sans HK', sans-serif;
+	font-size: 16px;
+	letter-spacing: 1;
 }
 svg{
 	fill: currentcolor;
@@ -169,7 +174,7 @@ img.svg{
     color: #fff;
     background-color: #E3872D;
     font-weight: 600;
-    font-family: "Montserrat";
+    font-family: "Noto Sans HK", sans-serif;
     padding: 12px 35px;
     border-radius: 3px;
     display: inline-block;
