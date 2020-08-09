@@ -302,6 +302,7 @@ img.svg{
 .tm_leftpart_wrap .leftpart_bottom .social_wrap ul{
 	margin: 0px;
 	list-style-type: none;
+	padding-bottom: 10px;
 }
 .tm_leftpart_wrap .leftpart_bottom .social_wrap ul li{
 	margin: 0px 10px 0px 0px;
@@ -337,6 +338,10 @@ img.svg{
 	    -ms-transition: all .3s ease;
 	     -o-transition: all .3s ease;
 	        transition: all .3s ease;
+}
+.tm_leftpart_wrap .leftpart_bottom .social_wrap ul li img{
+	width: 35px;
+	height: auto;
 }
 .tm_leftpart_wrap .tm_resize.opened{right: -30px;}
 .tm_leftpart_wrap .tm_resize i{
@@ -382,6 +387,9 @@ img.svg{
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
 			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.tm_my-right_profile{
+	display: none;
 }
 .tm_hero_header_wrap{
 	width: 100%;
@@ -482,7 +490,9 @@ img.svg{
 	width: 200px;
 	height: 200px;
 	display: inline-block;
-	margin-bottom: 38px;
+	// margin-bottom: 38px;
+	// margin-top: 5vw;
+	display: none;
 }
 .tm_hero_header_wrap .image_wrap img{
 	border-radius: 100%;
@@ -2625,7 +2635,7 @@ img.svg{
 	.tm_portfolio_single_wrap .title_holder h3{font-size: 45px;}
 }
 @media (max-width: 480px) {
-	.tm_hero_header_wrap .name_holder h3{font-size: 30px;}
+	.tm_hero_header_wrap .name_holder h3{font-size: 28px;}
 	.tm_hero_header_wrap .text_typing p{font-size: 18px;}
 	.tm_title_holder:before{display: none;}
 	.tm_title_holder h3{padding-left: 0px;}
@@ -2638,42 +2648,42 @@ img.svg{
 }	
 
 
-.img_rotate_border {
-	position: relative;
-	border-radius: 50%;
-	overflow: hidden;
-	padding: 0.09rem;
-}
-.img_rotate_border::before {
-		content: '';
-		position: absolute;
-		z-index: -2;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height:100%;
-		background-color: #399953;
-		background-repeat: no-repeat;
-		background-size: 50% 50%, 50% 50%;
-		background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-		background-image: linear-gradient(#399953, #399953), linear-gradient(#fbb300, #fbb300), linear-gradient(#C0C0C0, #C0C0C0), linear-gradient(#279cb9, #279cb9);
-		animation: rotate 4s linear infinite;
-	}
-	.img_rotate_border::after {
-		content: '';
-		position: absolute;
-		z-index: -1;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		border-radius: 50%;
-	}
-	@keyframes rotate {
-		100% {
-			transform: rotate(1turn);
-		}
-	}
+// .img_rotate_border {
+// 	position: relative;
+// 	border-radius: 50%;
+// 	overflow: hidden;
+// 	padding: 0.09rem;
+// }
+// .img_rotate_border::before {
+// 		content: '';
+// 		position: absolute;
+// 		z-index: -2;
+// 		left: 0;
+// 		top: 0;
+// 		width: 100%;
+// 		height:100%;
+// 		background-color: #399953;
+// 		background-repeat: no-repeat;
+// 		background-size: 50% 50%, 50% 50%;
+// 		background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+// 		background-image: linear-gradient(#399953, #399953), linear-gradient(#fbb300, #fbb300), linear-gradient(#C0C0C0, #C0C0C0), linear-gradient(#279cb9, #279cb9);
+// 		animation: rotate 4s linear infinite;
+// 	}
+// 	.img_rotate_border::after {
+// 		content: '';
+// 		position: absolute;
+// 		z-index: -1;
+// 		left: 0;
+// 		top: 0;
+// 		width: 100%;
+// 		height: 100%;
+// 		border-radius: 50%;
+// 	}
+// 	@keyframes rotate {
+// 		100% {
+// 			transform: rotate(1turn);
+// 		}
+// 	}
 
 
 
@@ -2685,6 +2695,11 @@ img.svg{
 	.tm_title_holder.portfolio {
 		padding-bottom: 45px;
 	}
+	.tm_search{
+        top: 90px;
+        padding-top: 20px;
+        width: 100%;
+    }
 }
 @media only screen and (max-width: 767px){
 	.tm_title_holder{
@@ -2695,11 +2710,35 @@ img.svg{
 	.tm_portfolio_project_content h4{
 		font-size: 16px;
 	}
-	.tm_hero_header_wrap .image_wrap{
-		margin-bottom: 15px;
-		width: 150px;
-		height: 150px;
+	.tm_hero_header_wrap{
+		.tm_my-right_profile{
+			display: flex;
+			justify-content: center;
+			margin-top: 45vw;
+			.image_wrap{
+				display: inline-block;
+				margin-bottom: 0;
+				width: 105px;
+    			height: 105px;
+			}
+			.profile_wrap{
+				display: block;
+				text-align: left;
+				color: #fff;
+				padding-left: 15px;
+				.profile_name{
+					font-size: 6vw;
+					span{
+						color: #E3872D;
+					}
+				}
+				.profile_bio{
+
+				}
+			}
+		}
 	}
+	
 }
 @media only screen and (max-width: 480px){
 	.tm_mobile_header_wrap .main_wrap{
@@ -2709,6 +2748,11 @@ img.svg{
 		position: absolute;
     	left: 0;
 	}
+	// .tm_hero_header_wrap .image_wrap{
+	// 	margin-top: 20vw;
+	// }
+	.tm_search{top: 50px !important;}
+	.tm_hero_header_wrap .tm_my-right_profile{margin-top: 5vw;}
 }
 
 
