@@ -16,7 +16,6 @@
 	09)  CONTACT
 	10)  TO TOP
 	11)  PARTICLE HOMEPAGE
-	12)  RIPPLE HOMEPAGE
 	13)  PORTFOLIO SINGLE
 	14)  MOBILE HEADER
     15)  MEDIA QUERIES (FOR SMALL DEVICES)
@@ -1923,6 +1922,7 @@ img.svg{
 
 .tm_footer_wrap{
 	width: 100%;
+	margin-top: 40px;
 	height: auto;
 	clear: both;
 	float: left;
@@ -2024,33 +2024,6 @@ img.svg{
 	left: 0px;
 	right: 0px;
 	background-color:rgba(7,23,55,.8);
-}
-
-/*---------------------------------------------------*/
-/*	12)  RIPPLE HOMEPAGE
-/*---------------------------------------------------*/
-
-.tm_ripple_wrap{
-	width: 100%;
-	height:100vh;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	 background-image: url('./assets/img/hero/2.jpg');
-	position: relative;
-}
-.tm_ripple_wrap .overlay{
-	position: absolute;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	background-color: rgba(7,23,55,.4);
-	z-index: 1;
-}
-.tm_ripple_wrap .container{
-	height: 100%;
-	z-index: 2;
 }
 
 
