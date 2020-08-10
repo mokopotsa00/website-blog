@@ -303,6 +303,7 @@ img.svg{
 	margin: 0px;
 	list-style-type: none;
 	padding-bottom: 10px;
+	padding-inline-start: 0;
 }
 .tm_leftpart_wrap .leftpart_bottom .social_wrap ul li{
 	margin: 0px 10px 0px 0px;
@@ -489,10 +490,8 @@ img.svg{
 .tm_hero_header_wrap .image_wrap{
 	width: 200px;
 	height: 200px;
-	display: inline-block;
 	// margin-bottom: 38px;
 	// margin-top: 5vw;
-	display: none;
 }
 .tm_hero_header_wrap .image_wrap img{
 	border-radius: 100%;
@@ -2699,11 +2698,50 @@ img.svg{
         top: 90px;
         padding-top: 20px;
         width: 100%;
-    }
+	}
+	.tm_hero_header_wrap .image_wrap{
+		display: inline-block;
+		margin-bottom: 0;
+		width: 155px;
+		height: 155px;
+	}
+	.tm_my-right_profile{
+		display: flex;
+		justify-content: center;
+		margin-top: 270px;
+		.profile_wrap{
+			display: block;
+			text-align: left;
+			color: #fff;
+			padding-top: 20px;
+			padding-left: 40px;
+			.profile_name{
+				font-size: 40px;
+				span{
+					color: #E3872D;
+				}
+			}
+		}
+	}
+	.tm_hero_header_wrap .name_holder h3{
+		// margin-top: 40px;
+		font-size: 5vw;
+    	// margin-bottom: 100px;
+	}
+	// .tm_hero_header_wrap {
+	// 	margin-bottom: 160px;
+	// }
 }
 @media only screen and (max-width: 767px){
 	.tm_title_holder{
 		padding-bottom: 30px;
+	}
+	.tm_my-right_profile {
+        margin-top: 235px;
+	}
+	.tm_hero_header_wrap .image_wrap {
+		width: 150px;
+    	height: 150px;
 	}
 }
 @media only screen and (max-width: 600px){
@@ -2712,9 +2750,7 @@ img.svg{
 	}
 	.tm_hero_header_wrap{
 		.tm_my-right_profile{
-			display: flex;
-			justify-content: center;
-			margin-top: 45vw;
+			margin-top: 30vw;
 			.image_wrap{
 				display: inline-block;
 				margin-bottom: 0;
@@ -2722,21 +2758,16 @@ img.svg{
     			height: 105px;
 			}
 			.profile_wrap{
-				display: block;
-				text-align: left;
-				color: #fff;
+				padding-top: 10px;
 				padding-left: 15px;
 				.profile_name{
 					font-size: 6vw;
-					span{
-						color: #E3872D;
-					}
-				}
-				.profile_bio{
-
 				}
 			}
 		}
+	}
+	.tm_hero_header_wrap .name_holder h3{
+		font-size: 6.5vw;
 	}
 	
 }
@@ -2751,8 +2782,14 @@ img.svg{
 	// .tm_hero_header_wrap .image_wrap{
 	// 	margin-top: 20vw;
 	// }
+	.profile_bio {
+		font-size: 4vw;
+	}
+	.tm_hero_header_wrap .name_holder h3{
+		margin: 10vw 0 12vw;
+	}
 	.tm_search{top: 50px !important;}
-	.tm_hero_header_wrap .tm_my-right_profile{margin-top: 5vw;}
+	.tm_hero_header_wrap .tm_my-right_profile{margin-top: 80px;}
 }
 
 
