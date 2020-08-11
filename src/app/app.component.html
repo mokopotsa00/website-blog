@@ -21,14 +21,14 @@
         <img src="../assets/img/logo/mobile_logo.png" alt="" />
       </div>
       <div class="tm_trigger">
-        <div class="hamburger hamburger--collapse-r">
+        <div class="hamburger hamburger--collapse-r" (click)="onMenuToggle()" [ngClass]="isActive ? 'is-active':''">
           <div class="hamburger-box">
             <div class="hamburger-inner"></div>
           </div>
         </div>
       </div>
     </div>
-    <div class="tm_mobile_menu_wrap">
+    <div class="tm_mobile_menu_wrap" >
       <div class="mob_menu">
         <ul class="anchor_nav">
           <li><a href="/">Home</a></li>

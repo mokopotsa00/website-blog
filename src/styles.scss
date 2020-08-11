@@ -194,7 +194,10 @@ img.svg{
     z-index: 1;
 }
 .buttons_wrap ul li a:hover:before{width: 180%;}
-
+.tm_web_summary{
+	font-size: 24px;
+	text-align: center;
+}
 /*---------------------------------------------------*/
 /*	02)  CONTENT
 /*---------------------------------------------------*/
@@ -584,7 +587,7 @@ img.svg{
 	clear: both;
 	float: left;
 	text-align: left;
-	padding-bottom: 100px;
+	padding-bottom: 50px;
 	position: relative;
 	
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -598,7 +601,7 @@ img.svg{
 	width: 6px;
 	height: 72px;
 	background-color: #E3872D;
-	top: 2px;
+	top: 55px;
 }
 .tm_title_holder h3{
 	font-size: 50px;
@@ -613,6 +616,8 @@ img.svg{
 	font-size: 16px;
 	font-family: "Montserrat";
 	padding-left: 25px;
+	position: absolute;
+    top: 100px;
 }
 .tm_about_wrapper_all{
 	width: 100%;
@@ -620,7 +625,7 @@ img.svg{
 	clear: both;
 	float: left;
 	background-color: #fff;
-	
+	padding: 100px 60px 0 60px;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
 			box-sizing: border-box; /* Opera/IE 8+ */
@@ -710,7 +715,7 @@ img.svg{
 	height: auto;
 	clear: both;
 	float: left;
-	padding-bottom: 122px;
+	padding-bottom: 100px;
 	position: relative;
 	margin-top: -6px;
 	
@@ -765,7 +770,10 @@ img.svg{
 	right: -25px !important;
 	border: 10px solid #041230;
 }
-.tm_about_wrap .leftbox .about_image_wrap img{opacity: 0;}
+.tm_about_wrap .leftbox .about_image_wrap img{
+	opacity: 1;
+    width: 100%;
+}
 .tm_about_wrap .rightbox{
 	width: 65%;
 	float: right;
@@ -2733,6 +2741,9 @@ img.svg{
 	// }
 }
 @media only screen and (max-width: 767px){
+	.tm_about_wrapper_all{
+		padding: 130px 30px 0 30px;
+	}
 	.tm_title_holder{
 		padding-bottom: 30px;
 	}

@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'my-blog';
+  isActive = false;
+
+  onMenuToggle(){
+    this.isActive = !this.isActive;
+    if( this.isActive){
+      (document.querySelector('.tm_mobile_menu_wrap') as HTMLElement).style.display = 'block';
+    }
+    else{
+      (document.querySelector('.tm_mobile_menu_wrap') as HTMLElement).style.display = 'none';
+    }
+  }
 }
