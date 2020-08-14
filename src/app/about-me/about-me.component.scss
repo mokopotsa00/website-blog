@@ -1,3 +1,68 @@
 .rightbox .buttons_wrap{
     padding-top: 25px;
 }
+.tm_about_banner{
+    height: 200px;
+    width: 100%;
+    background-image: url('../../assets/img/about/istockphoto-1155828629-612x612.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.tm_text_image, .tm_image_text{
+    display: flex;
+    padding: 60px 60px 30px;
+}
+.tm_image-wrap{
+    width: 40%;
+}
+.tm_about_image{
+    width: 100%;
+    min-height: 200px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    margin-top: 40px;
+}
+.tm_image_text{
+    .tm_about_image{
+        background-image: url(../../assets/img/about/team.jpg);
+    }
+    .tm_about_text{
+        padding-left: 40px;
+        text-align: center;
+    }
+}
+.tm_text_image{
+    padding-bottom: 40px;
+    .tm_about_image{
+        background-image: url(../../assets/img/about/i-can-help.jpg);
+        text-align: right;
+    }
+    .tm_about_text{
+        padding-right: 40px;
+        text-align: center;
+    }
+}
+.tm_about_text{
+    width: 55%;
+}
+@media only screen and (max-width: 767px){
+    .tm_about_text{ width: 100%}
+    .tm_image-wrap{ display: none}
+    .tm_text_image .tm_about_text{
+        padding-right: 0px;
+    }
+    .tm_image_text .tm_about_text{
+        padding-left: 0px;
+    }
+    .tm_text_image, .tm_image_text{
+        display: block;
+        padding: 30px;
+    }
+    .tm_image_text{ padding-bottom: 15px;
+    .buttons_wrap{
+        padding-bottom: 30px;
+    }
+}
+    .tm_text_image{padding-top: 0;}
+}
