@@ -48,7 +48,7 @@ h2{
 	font-weight: 500;
 	font-size: 30px;
 }
-input{
+input, textarea{
 	font-family: 'Noto Sans HK', sans-serif;
 	font-size: 16px;
 	letter-spacing: 1;
@@ -57,6 +57,10 @@ svg{
 	fill: currentcolor;
 	width: 15px;
 	height: 15px;
+}
+img {
+    vertical-align: middle;
+    max-width: 100%;
 }
 img.svg{
 	width: 15px;
@@ -84,25 +88,25 @@ img.svg{
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color: #333;
+    color: #7d7d7d;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color: #333;
+   color: #7d7d7d;
    opacity:  1;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color: #333;
+   color: #7d7d7d;
    opacity:  1;
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color: #333;
+   color: #7d7d7d;
 }
 ::-ms-input-placeholder { /* Microsoft Edge */
-   color: #333;
+   color: #7d7d7d;
 }
 
 ::placeholder { /* Most modern browsers support this now. */
-   color: #333;
+   color: #7d7d7d;
 }
 .tm_preloader{
   position: fixed;
@@ -164,6 +168,7 @@ img.svg{
 .buttons_wrap ul{
 	margin: 0px;
 	list-style-type: none;
+	padding: 0;
 }
 .buttons_wrap ul li a span{
 	position: relative;
@@ -252,7 +257,7 @@ img.svg{
 .tm_leftpart_wrap .menu_list_wrap ul li a{
 	text-decoration: none;
 	color: #fff;
-	font-family: "Montserrat";
+	font-family: "Noto Sans HK", sans-serif;
 	font-size: 16px;
 	font-weight: 500;
 	text-transform: uppercase;
@@ -500,7 +505,7 @@ img.svg{
 	border-radius: 100%;
 }
 .tm_hero_header_wrap .name_holder h3{
-	font-family: "Montserrat";
+	font-family: "Noto Sans HK", sans-serif;
 	text-transform: uppercase;
 	color: #fff;
 	font-size: 50px;
@@ -519,11 +524,6 @@ img.svg{
 	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
 			box-sizing: border-box; /* Opera/IE 8+ */
 }
-.tm_hero_header_wrap .text_typing p{
-	color: #fff;
-	font-size: 24px;
-	font-family: "Montserrat";
-}
 .tm_blink_charecter {
 	animation: blinker 1s linear infinite;
   }
@@ -535,7 +535,7 @@ img.svg{
 .tm_animation_text_word{
 	font-weight: 600;
 	line-height: 1;
-	font-family: "Montserrat";
+	font-family: "Noto Sans HK", sans-serif;
 }
 .tm_about_wrap .tm_animation_text_word{color: #E3872D;}
 .tm_arrow_wrap{
@@ -587,14 +587,13 @@ img.svg{
 	clear: both;
 	float: left;
 	text-align: left;
-	padding-bottom: 50px;
 	position: relative;
+	padding-bottom: 60px;
 	
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
 			box-sizing: border-box; /* Opera/IE 8+ */
 }
-.tm_title_holder.contact{padding-bottom: 93px;}
 .tm_title_holder:before{
 	position: absolute;
 	content: "";
@@ -614,13 +613,13 @@ img.svg{
 }
 .tm_title_holder span{
 	font-size: 16px;
-	font-family: "Montserrat";
+	font-family: "Noto Sans HK", sans-serif;
 	padding-left: 25px;
 	position: absolute;
     top: 100px;
 }
-.tm_about_wrapper_all{
-	padding: 100px 60px 0 60px;
+.tm_header_wrap{
+	padding: 90px 60px 0 60px;
 }
 .tm_main_title_holder{
 	width: 100%;
@@ -641,7 +640,7 @@ img.svg{
 }
 .tm_main_title_holder h3{
 	font-weight: 900;
-	font-family: "Montserrat";
+	font-family: "Noto Sans HK", sans-serif;
 	color: #041230;
 	font-size: 30px;
 	line-height: 1;
@@ -676,7 +675,7 @@ img.svg{
 }
 .tm_main_title_holder h3{
 	font-weight: 900;
-	font-family: "Montserrat";
+	font-family: "Noto Sans HK", sans-serif;
 	color: #041230;
 	font-size: 30px;
 	line-height: 1;
@@ -712,6 +711,7 @@ img.svg{
 	position: relative;
 	display: flex;
 	align-items: center;
+	padding: 0 60px;
 	
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
@@ -770,7 +770,7 @@ img.svg{
 	margin-bottom: 20px;
 }
 .tm_about_wrap .subtitle p{
-	font-family: "Montserrat";
+	font-family: "Noto Sans HK", sans-serif;
 	color: #333;
 	font-size: 15px;
 	font-weight: 600;
@@ -817,7 +817,7 @@ img.svg{
 }
 .tm_about_wrap .about_short_contact_wrap ul li:nth-of-type(2n){clear: right;}
 .about_short_contact_wrap ul li label{
-	font-family: "Montserrat";
+	font-family: "Noto Sans HK", sans-serif;
 	font-weight: 700;
 	font-size: 13px;
 	color: #000;
@@ -836,17 +836,6 @@ img.svg{
     transition: all .3s ease;
 }
 .tm_about_wrap .about_short_contact_wrap ul li a:hover{color: #BD0A0D;}
-// .tm_skills_wrap,
-// .tm_skills_wrap .inner_wrap{
-// 	width: 100%;
-// 	height: auto;
-// 	clear: both;
-// 	float: left;
-	
-// 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-// 	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
-// 			box-sizing: border-box; /* Opera/IE 8+ */
-// }
 .tm_skills_wrap{
 	background-color: #f6f7fd;
 	padding: 45px 60px 60px;
@@ -922,7 +911,7 @@ img.svg{
 	font-size:13px;
 	font-weight:700;
 	color:#000;
-	font-family: "Montserrat";
+	font-family: "Noto Sans HK", sans-serif;
 }
 .tm_progress span.label .experience{font-size: 12px;font-weight: 600;}
 .tm_progress span.number{
@@ -930,7 +919,7 @@ img.svg{
 	font-size:13px;
 	color:#000;
 	font-weight: 700;
-	font-family: "Montserrat";
+	font-family: "Noto Sans HK", sans-serif;
 }
 .tm_progress .tm_bar_bg{
 	background:rgba(0,0,0,.1);
@@ -989,84 +978,6 @@ img.svg{
 .tm_mini_title_holder.contact h4{margin-bottom:30px;}
 
 /*---------------------------------------------------*/
-/*	04)  SERVICES
-/*---------------------------------------------------*/
-
-.tm_services_wrap{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	background-color: #fff;
-	margin-bottom: 70px;
-	text-align: left;
-	
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
-			box-sizing: border-box; /* Opera/IE 8+ */ 
-}
-.tm_services_wrap .tm_title_holder_wrap{margin-bottom: 93px;}
-.tm_services_wrap .list_wrap{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
-			box-sizing: border-box; /* Opera/IE 8+ */ 
-}
-.tm_services_wrap .list_wrap ul{
-	margin: 0px 0px 0px -30px;
-	list-style-type: none;
-}
-.tm_services_wrap .list_wrap ul li{
-	margin: 0px 0px 30px 0px;
-	float: left;
-	width: 33.3333%;
-	padding-left: 30px;
-	
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
-			box-sizing: border-box; /* Opera/IE 8+ */ 
-}
-.tm_services_wrap .list_wrap ul li .inner{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	position: relative;
-	box-shadow: 0 0 20px rgba(0,0,0,.1);
-	padding: 40px 40px 33px 40px;
-	top: 0px;
-	
-	-webkit-transition: all .3s ease;
-	   -moz-transition: all .3s ease;
-	    -ms-transition: all .3s ease;
-	     -o-transition: all .3s ease;
-	        transition: all .3s ease;
-	
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
-			box-sizing: border-box; /* Opera/IE 8+ */ 
-}
-.tm_services_wrap .list_wrap ul li .inner:hover{top: -5px;}
-.tm_services_wrap .list_wrap ul li .icon{margin-bottom: 21px;}
-.tm_services_wrap .list_wrap ul li .icon .svg{
-	width: 40px;
-	height: 40px;
-	color: #E3872D;
-}
-.tm_services_wrap .list_wrap ul li .title_service{margin-bottom: 17px;}
-.tm_services_wrap .list_wrap ul li .title_service h3{
-	font-family: "Montserrat";
-    font-size: 22px;
-    font-weight: 600;
-    color: #000000;
-	line-height: 1;
-}
-
-/*---------------------------------------------------*/
 /*	05)COUNTERBOX
 /*---------------------------------------------------*/
 
@@ -1123,7 +1034,7 @@ img.svg{
 }
 .tm_counter_list li:nth-child(4) .inner:before{display: none;}
 .tm_counter_list li h3{
-	font-family: "Montserrat";
+	font-family: "Noto Sans HK", sans-serif;
 	color: #181a2f;
 	margin-bottom: 10px;
 }
@@ -1143,13 +1054,12 @@ img.svg{
 /*	06) PORTFOLIO
 /*---------------------------------------------------*/
 
-.tm_title_holder.portfolio{padding-bottom: 90px;}
+.tm_portfolio_wrapper_all .tm_title_holder{padding-bottom: 50px;}
 .tm_portfolio_wrapper_all{
 	width: 100%;
 	height: auto;
 	clear: both;
 	float: left;
-	padding-bottom: 70px;
 	background-color: #fff;
 	
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -1162,7 +1072,7 @@ img.svg{
 	height: auto;
 	clear: both;
 	float: left;
-	
+	padding-right: 40px;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
 			box-sizing: border-box; /* Opera/IE 8+ */ 
@@ -1245,7 +1155,7 @@ img.svg{
   top: 100%;
   left: 0;
   margin-top: -5px;
-  font-family: "Montserrat";
+  font-family: "Noto Sans HK", sans-serif;
   font-size: 12px;
   font-weight: 400;
   padding: 5px 15px;
@@ -1263,156 +1173,7 @@ img.svg{
 }
 
 /*---------------------------------------------------*/
-/*	07) TESTIMONIALS
-/*---------------------------------------------------*/
-
-.tm_testimonials_wrapper_all{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
-			box-sizing: border-box; /* Opera/IE 8+ */ 
-}
-.tm_testimonial_wrap{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
-			box-sizing: border-box; /* Opera/IE 8+ */ 
-}
-.tm_testimonial_wrap .carousel_wrap{
-	width: 100%;
-	max-width: 730px;
-	margin: 0px auto;
-	height: auto;
-	clear: both;
-	text-align: center;
-	cursor: e-resize;
-	
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
-			box-sizing: border-box; /* Opera/IE 8+ */ 
-}
-.tm_testimonial_wrap .carousel_wrap ul{
-	margin: 0px;
-	list-style-type: none;
-}
-.tm_testimonial_wrap .carousel_wrap ul li{margin: 0px;}
-.tm_testimonial_wrap .carousel_wrap ul li .inner{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	position: relative;
-	
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
-			box-sizing: border-box; /* Opera/IE 8+ */ 
-}
-.tm_testimonial_wrap .quotebox_wrap{
-	clear: both;
-	margin-bottom: 22px;
-}
-.tm_testimonial_wrap .quotebox_wrap i{
-	color: #E3872D;
-	font-size: 35px;
-}
-.tm_testimonial_wrap .definitions_wrap{
-	clear: both;
-	margin-bottom: 32px;
-}
-.tm_testimonial_wrap .definitions_wrap p{
-	color: #fff;
-	font-size: 27px;
-	font-family: "Montserrat";
-	font-weight: 600;
-	line-height: 1.4;
-}
-.tm_testimonial_wrap .name_holder p{
-	color: #fff;
-	font-size: 18px;
-	font-family: "Montserrat";
-}
-
-.tm_universal_box_wrap{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	position: relative;
-	
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
-			box-sizing: border-box; /* Opera/IE 8+ */
-}
-.tm_universal_box_wrap .bg_wrap{
-	position: absolute;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	z-index: 10;
-}
-.tm_universal_box_wrap .overlay_image{
-	position: absolute;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	z-index: 15;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-}
-.tm_universal_box_wrap .overlay_video{
-	position: absolute;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	z-index: 15;
-	overflow: hidden;
-}
-.tm_universal_box_wrap .overlay_video video{
-	width: 100%;
-	height: 100%;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	object-fit: cover;
-}
-.tm_universal_box_wrap .overlay_color{
-	position: absolute;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	z-index: 20;
-}
-.tm_universal_box_wrap .content{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	position: relative;
-	z-index: 25;
-	
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
-			box-sizing: border-box; /* Opera/IE 8+ */
-}
-.tm_universal_box_wrap .overlay_image.testimonial{background-image: url('./assets/img/hero/3.jpg');}
-.tm_universal_box_wrap .overlay_color.testimonial{background-color: rgba(7,23,55,.8);}
-.tm_universal_box_wrap .content.testimonial{padding: 82px 0px 90px 0px;}
-
-/*---------------------------------------------------*/
-/*	08)  NEWS
+/*	NEWS
 /*---------------------------------------------------*/
 
 .tm_list_wrap{
@@ -1420,7 +1181,8 @@ img.svg{
 	height: auto;
 	clear: both;
 	float: left;
-	
+	padding-right: 40px;
+
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
 			box-sizing: border-box; /* Opera/IE 8+ */
@@ -1456,8 +1218,7 @@ img.svg{
 	height: auto;
 	clear: both;
 	float: left;
-	padding-top: 98px;
-	padding-bottom: 70px;
+	// padding-bottom: 50px;
 	background-color: #f6f7fd;
 	margin-bottom: 100px;
 	
@@ -1494,7 +1255,7 @@ img.svg{
 .tm_news_wrap .date_wrap{margin-bottom: 16px;}
 .tm_news_wrap .date_wrap p{
 	color: #333;
-	font-family: "Montserrat";
+	font-family: "Noto Sans HK", sans-serif;
 	font-weight: 600;
 }
 .tm_news_wrap .full_def{display: none;}
@@ -1527,7 +1288,7 @@ img.svg{
 	color: #fff;
 	line-height: 1.4;
 	font-weight: 600;
-	font-family: "Montserrat";
+	font-family: "Noto Sans HK", sans-serif;
 }
 .tm_news_wrap .title_holder h3 a{
 	text-decoration: none;
@@ -1549,7 +1310,7 @@ img.svg{
     color: #fff;
     background-color: #E3872D;
     font-weight: 600;
-    font-family: "Montserrat";
+    font-family: "Noto Sans HK", sans-serif;
     padding: 12px 35px;
     border-radius: 3px;
     display: inline-block;
@@ -1621,7 +1382,7 @@ img.svg{
 }
 #tm_popup_blog .date_wrap p{
 	color: #333;
-    font-family: "Montserrat";
+    font-family: "Noto Sans HK", sans-serif;
     font-weight: 600;
 }
 #tm_popup_blog .date_wrap p a{
@@ -1682,7 +1443,7 @@ img.svg{
 #tm_popup_blog .title_holder h3{
     line-height: 1.4;
     font-weight: 600;
-    font-family: "Montserrat";
+    font-family: "Noto Sans HK", sans-serif;
 }
 #tm_popup_blog .title_holder h3 a{
     text-decoration: none;
@@ -1717,7 +1478,7 @@ img.svg{
     color: #000;
     font-size: 15px;
     position: relative;
-    font-family: "Montserrat";
+    font-family: "Noto Sans HK", sans-serif;
     font-weight: 600;
 	
     -webkit-transition: all .3s ease;
@@ -1766,7 +1527,7 @@ img.svg{
 }
 
 /*---------------------------------------------------*/
-/*	09)  CONTACT
+/* CONTACT
 /*---------------------------------------------------*/
 
 .tm_contact_wrap_all{
@@ -1774,54 +1535,17 @@ img.svg{
 	height: auto;
 	clear: both;
 	float: left;
+	padding: 0 60px;
 	background-color: #fff;
 	
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
 			box-sizing: border-box; /* Opera/IE 8+ */
 }
-.tm_contact_wrap_all .leftbox{
-	width: 40%;
-	height: auto;
-	float: left;
-	padding-right: 40px;
-	
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
-			box-sizing: border-box; /* Opera/IE 8+ */		
-}
-.tm_contact_wrap_all .leftbox .short_info_wrap{
+.tm_contact_wrap_all .formbox{
 	width: 100%;
 	height: auto;
-	clear: both;
-	float: left;
-	
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
-			box-sizing: border-box; /* Opera/IE 8+ */
-}
-.tm_contact_wrap_all .leftbox .short_info_wrap ul{
-	margin: 0px;
-	list-style-type: none;
-}
-.tm_contact_wrap_all .leftbox .short_info_wrap ul li{
-	margin: 0px 0px 15px 0px;
-}
-.tm_contact_wrap_all .leftbox .short_info_wrap ul li label{
-	font-family: "Montserrat";
-    font-weight: 700;
-    font-size: 13px;
-    color: #000;
-}
-.tm_contact_wrap_all .leftbox .short_info_wrap ul li span{padding-left: 5px;}
-.tm_contact_wrap_all .leftbox .short_info_wrap ul li a{
-	text-decoration: none;
-	color: #000;
-}
-.tm_contact_wrap_all .rightbox{
-	width: 60%;
-	height: auto;
-	float: right;
+	float: none;
 	
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
@@ -1830,7 +1554,6 @@ img.svg{
 .tm_contact_wrap{
 	max-width: 830px;
 	height: auto;
-	margin: 0px auto;
 	
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
@@ -1872,7 +1595,7 @@ img.svg{
 }
 .tm_contact_wrap .main_input_wrap .wrap textarea{
 	width: 100%;
-	height: 80px;
+	height: 120px;
 	text-align: left;
 	background-color: transparent;
 	border: none;
@@ -1888,7 +1611,7 @@ img.svg{
     color: #fff;
     background-color: #E3872D;
     font-weight: 600;
-    font-family: "Montserrat";
+    font-family: "Noto Sans HK", sans-serif;
     padding: 12px 35px;
     border-radius: 3px;
     display: inline-block;
@@ -1937,7 +1660,7 @@ img.svg{
 	float: left;
 	text-align: left;
 	background-image: linear-gradient(190deg, #0c687b, #0a1937);
-	padding: 50px 0px;
+	padding: 50px 60px;
 	
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
@@ -1947,92 +1670,9 @@ img.svg{
 .tm_footer_wrap p a{
 	text-decoration: none;
 	color: #fff;
-	font-family: "Montserrat";
+	font-family: "Noto Sans HK", sans-serif;
 	font-weight: 600;
     position: relative;
-}
-
-/*---------------------------------------------------*/
-/*	10) EDREA TO TOP
-/*---------------------------------------------------*/
-
-.tm_totop{
-	position: fixed;
-	bottom: 40px;
-	right: 55px;
-	z-index: 100;
-	overflow: hidden;
-	outline: 1px solid rgba(255,255,255,.2);
-
-	background-color: #E3872D;
-    padding: 22px;
-    border-radius: 3px;
-    display: inline-block;
-	
-	opacity: 0;
-	visibility: hidden;
-	
-	-webkit-transition: all .5s ease;
-	   -moz-transition: all .5s ease;
-	    -ms-transition: all .5s ease;
-	     -o-transition: all .5s ease;
-	        transition: all .5s ease;
-}
-.tm_totop:before{
-	position: absolute;
-    content: "";
-    top: 0px;
-    height: 100%;
-    left: -75%;
-    width: 0%;
-    background-image: linear-gradient(190deg, #0c687b, #0a1937);
-    transform: skew(50deg);
-    transition-duration: .6s;
-    z-index: 1;
-}
-.tm_totop:after{
-	width: 0px;
-    height: 0px;
-    position: absolute;
-    content: '';
-    border: 5px solid transparent;
-    border-bottom-color: #fff;
-    top: 14px;
-    left: 17px;
-	z-index: 2;
-}
-.tm_totop:hover:before{width: 290%;}
-.tm_totop.opened{
-	opacity: 1;
-	visibility: visible;
-	bottom: 55px;
-}
-
-/*---------------------------------------------------*/
-/*	11)  PARTICLE HOMEPAGE
-/*---------------------------------------------------*/
-
-#particles-js {
-	width: 100%;
-	height: 100%;
-  	position: relative;
-  	z-index: 2;
-}
-.tm_universal_box_wrap.particle{
-	height: 100vh;
-	position: relative;
-	 background-image: url('./assets/img/hero/2.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-}
-.tm_universal_box_wrap.particle .particle_overlay{
-	position: absolute;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	background-color:rgba(7,23,55,.8);
 }
 
 
@@ -2120,7 +1760,7 @@ img.svg{
 	color: #FFFFFF;
 	font-size: 25px;
 	font-weight: 500;
-	font-family: "Montserrat";
+	font-family: "Noto Sans HK", sans-serif;
 }
 .tm_intro_universal_bg_wrap .purchase_button a span{
 	position: relative;
@@ -2131,7 +1771,7 @@ img.svg{
     color: #fff;
     background-color: #fd4d4d;
     font-weight: 600;
-    font-family: "Montserrat";
+    font-family: "Noto Sans HK", sans-serif;
     padding: 12px 40px;
     border-radius: 3px;
     display: inline-block;
@@ -2177,7 +1817,7 @@ img.svg{
 	font-weight: 600;
 	padding: 80px 0px;
 	text-transform: uppercase;
-	font-family: "Montserrat";
+	font-family: "Noto Sans HK", sans-serif;
 }
 .tm_main_demos_title.another span{padding-top: 20px !important;}
 .tm_main_demos_list_wrap ul{
@@ -2226,7 +1866,7 @@ img.svg{
 .tm_main_demos_list_wrap ul li .inner .name span a{
 	text-decoration: none;
 	color: #000;
-	font-family: "Montserrat";
+	font-family: "Noto Sans HK", sans-serif;
 	
 	-webkit-transition: all .3s ease;
 	   -moz-transition: all .3s ease;
@@ -2257,7 +1897,7 @@ img.svg{
 }
 
 /*---------------------------------------------------*/
-/*	13)  PORTFOLIO SINGLE
+/*	  PORTFOLIO SINGLE
 /*---------------------------------------------------*/
 
 .tm_portfolio_single_wrap{
@@ -2303,7 +1943,7 @@ img.svg{
 			box-sizing: border-box; /* Opera/IE 8+ */
 }
 .tm_portfolio_single_wrap .details_wrap .name_holder h3{
-	font-family: "Montserrat";
+	font-family: "Noto Sans HK", sans-serif;
     font-size: 22px;
     font-weight: 600;
     color: #000000;
@@ -2382,7 +2022,7 @@ img.svg{
     color: #fff;
     background-color: rgba(7,23,50,0.5);
     font-weight: 600;
-    font-family: "Montserrat";
+    font-family: "Noto Sans HK", sans-serif;
     padding: 12px 35px;
     border-radius: 3px;
     display: inline-block;
@@ -2414,7 +2054,7 @@ img.svg{
 	text-align: center;
 }
 /*---------------------------------------------------*/
-/*	14)  MOBILE HEADER
+/*	  MOBILE HEADER
 /*---------------------------------------------------*/
 
 .tm_mobile_header_wrap{
@@ -2571,13 +2211,13 @@ img.svg{
 .tm_mobile_menu_wrap .mob_menu > ul > li a{
 	text-decoration: none;
 	color: #fff;
-	font-family: "Montserrat";
+	font-family: "Noto Sans HK", sans-serif;
 	font-weight: 600;
 	font-size: 19px;
 }
 
 /*---------------------------------------------------*/
-/*	15)  MEDIA QUERIES (FOR SMALL DEVIVES)
+/*	  MEDIA QUERIES (FOR SMALL DEVIVES)
 /*---------------------------------------------------*/
 
 @media (max-width: 1400px) {
@@ -2589,8 +2229,6 @@ img.svg{
 	.tm_list_wrap > ul.total > li{width: 50%;}
 	.tm_about_wrap .leftbox{display: none;}
 	.tm_about_wrap .rightbox{padding-left: 0px;width: 100%;}
-	.tm_contact_wrap_all .leftbox{width: 100%;padding-right: 0px;margin-bottom: 19px;}
-	.tm_contact_wrap_all .rightbox{width: 100%;float: none;}
 }
 @media (max-width: 1040px) {
 	.tm_about_wrap{flex-direction: column;}
@@ -2729,8 +2367,11 @@ img.svg{
 	// }
 }
 @media only screen and (max-width: 767px){
-	.tm_about_wrapper_all{
+	.tm_header_wrap{
 		padding: 130px 30px 0 30px;
+	}
+	.tm_about_wrap .author_wrap{
+		padding: 0 30px;
 	}
 	.tm_title_holder{
 		padding-bottom: 30px;
