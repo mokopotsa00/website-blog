@@ -4,22 +4,6 @@
 /*	Copyright (c) 2020 Thuso Mokopotsa
 /*	Author: Thuso Mokopotsa
 
-
-	01)  BASE
-	02)  CONTENT
-	03)  ABOUT
-	04)  SERVICES
-	05)  COUNTERBOX
-	06)  PORTFOLIO
-	07)  TESTIMONIALS
-	08)  NEWS
-	09)  CONTACT
-	10)  TO TOP
-	11)  PARTICLE HOMEPAGE
-	13)  PORTFOLIO SINGLE
-	14)  MOBILE HEADER
-    15)  MEDIA QUERIES (FOR SMALL DEVICES)
-
 	
 /*---------------------------------------------------*/
 /*	01)  BASE
@@ -124,7 +108,7 @@ img.svg{
 .tm_preloader .spinner_wrap{
 	position: absolute;
 	top: 50%;
-	left: 50%;
+	left: 40%;
 	transform: translate(-50%,-50%);
 	z-index: 33333;
 }
@@ -1565,7 +1549,7 @@ img.svg{
 }
 .tm_contact_wrap .subtitle p{color: #333;}
 .tm_contact_wrap .main_input_wrap{
-	margin-bottom: 75px;
+	margin-bottom: 30px;
 	position: relative;
 	top: -24px;
 }
@@ -2184,7 +2168,7 @@ img.svg{
 	float: left;
 	background-color: rgba(4,18,48,.97);
 	padding: 30px 20px;
-	display: none;
+	// display: none;
 	border-bottom: 1px solid rgba(0,0,0,.09);
 	border-top: 1px solid rgba(0,0,0,.09);
 	
@@ -2368,17 +2352,30 @@ img.svg{
 }
 @media only screen and (max-width: 767px){
 	.tm_header_wrap{
-		padding: 130px 30px 0 30px;
+		padding: 110px 30px 0 30px;
+	}
+	.tm_contact_wrap_all{
+		padding: 0 20px;
+	}
+	.tm_portfolio_filter li {
+		margin-right: 30px;
+		&:last-child{
+			margin-right: 0px;
+		}
+	}
+	.tm_news_wrap .definitions_wrap {
+		padding: 10px;
 	}
 	.tm_about_wrap .author_wrap{
 		padding: 0 30px;
 	}
-	.tm_title_holder{
-		padding-bottom: 30px;
-	}
-	.tm_skills_wrap{
-		padding: 30px 30px 60px;
-	}
+	.tm_list_wrap{ padding-right: 10px; margin-left: -5px; }
+	.tm_news_wrap .tm_list_wrap .inner_list{ margin-bottom: 20px;}
+	.tm_title_holder{padding-bottom: 30px;}
+	.tm_news_wrap{ margin-bottom: 20px;}
+	.tm_portfolio_wrap{padding-right: 20px;}
+	.tm_skills_wrap{padding: 30px 30px 60px;}
+	#contact .tm_title_holder h3{padding-bottom: 20px;}
 	.tm_my-right_profile {
         margin-top: 235px;
 	}
@@ -2386,9 +2383,12 @@ img.svg{
 		width: 150px;
     	height: 150px;
 	}
+	.tm_hero_header_wrap{ margin-bottom: 60px;}
 	.tm_title_holder{margin-top: 50px;}
+	.tm_footer_wrap{ padding: 25px 20px;}
 }
 @media only screen and (max-width: 600px){
+	ul{padding-inline-start: 20px;}
 	.tm_portfolio_project_content h4{
 		font-size: 16px;
 	}
@@ -2433,11 +2433,28 @@ img.svg{
 		font-size: 4vw;
 	}
 	.tm_hero_header_wrap .name_holder h3{
-		margin: 10vw 0 12vw;
+		margin: 5vw 0;
+		line-height: 1.5;
 	}
 	.tm_search{top: 50px !important;}
-	.tm_hero_header_wrap .tm_my-right_profile{margin-top: 80px;}
+	.tm_hero_header_wrap .tm_my-right_profile{margin-top: 100px;}
 }
+
+@media only screen and (max-width: 348px){
+	.tm_news_wrap .tm_title_holder span{ top: 140px}
+}
+@media only screen and (max-width: 439px){
+	.tm_portfolio_wrapper_all .tm_title_holder span,
+	#contact .tm_title_holder span{top: 145px;}
+	#contact .tm_title_holder h3{
+		padding-right: 10px;
+		padding-bottom: 20px;
+	}
+}
+@media only screen and (max-width: 289px){
+	
+}
+
 
 
 /* Unavailable section */
@@ -2446,3 +2463,32 @@ img.svg{
     padding: 40px;
 	/* width: 410px; */
 }
+
+
+.spinner {
+	width: 70px;
+	height: 70px;
+	background-color: #fff;
+  
+	border-radius: 100%;  
+	-webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+	animation: sk-scaleout 1.0s infinite ease-in-out;
+  }
+  
+  @-webkit-keyframes sk-scaleout {
+	0% { -webkit-transform: scale(0) }
+	100% {
+	  -webkit-transform: scale(1.0);
+	  opacity: 0;
+	}
+  }
+  @keyframes sk-scaleout {
+	0% { 
+	  -webkit-transform: scale(0);
+	  transform: scale(0);
+	} 100% {
+	  -webkit-transform: scale(1.0);
+	  transform: scale(1.0);
+	  opacity: 0;
+	}
+  }

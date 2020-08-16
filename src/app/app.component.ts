@@ -1,20 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { SlideInOutAnimation } from './shared/animation/animation'
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [SlideInOutAnimation]
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   isActive = false;
+  isMobileSearch = true;
 
+  animationState = 'out';
+
+  ngOnInit(){
+    setTimeout(() => {
+      (document.querySelector('.tm_preloader') as HTMLElement).classList.add("loaded");
+    }, 1000)
+  }
   onMenuToggle(){
     this.isActive = !this.isActive;
-    if( this.isActive){
-      (document.querySelector('.tm_mobile_menu_wrap') as HTMLElement).style.display = 'block';
-    }
-    else{
-      (document.querySelector('.tm_mobile_menu_wrap') as HTMLElement).style.display = 'none';
-    }
+    this.animationState = this.animationState === 'out' ? 'in' : 'out';
   }
 }

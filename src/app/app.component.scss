@@ -10,6 +10,51 @@
         border-radius: 100%;
     }
 }
+.tm_mobile_search .search-toggle{ display: block; padding: 14px 20px; cursor: 'pointer';}
+.tm_mobile_search .closed span{
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        left: -8px;
+        top: -10px;
+        bottom: 0;
+        width: 23px;
+        height: 23px;
+        background-image: url('../assets/icons/search-mobile-header.svg');
+        background-position: center;
+        background-size: cover;
+    }  
+}
+.tm_mobile_search .opened span{
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        left: -13px;
+        top: 0px;
+        bottom: 0;
+        width: 13px;
+        height: 13px;
+        background-image: url('../assets/icons/search-mobile-header.svg');
+        background-position: center;
+        background-size: cover;
+        cursor: pointer;
+    }  
+    &::after {
+        content: "";
+        position: absolute;
+        left: -6px;
+        top: -11px;
+        bottom: 0;
+        width: 25px;
+        height: 25px;
+        background-image: url('../assets/icons/close.svg');
+        background-position: center;
+        background-size: cover;
+        cursor: pointer;
+    }
+}
 .tm_my-left_profile{
     margin-top: -35px;
     margin-bottom: 30px;
@@ -31,9 +76,6 @@
                     color: #E3872D;
                 }
             }
-        }
-        .profile_bio{
-
         }
     }
 }
