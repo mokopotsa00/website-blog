@@ -28,7 +28,7 @@
     <div class="tm_mobile_menu_wrap" [@slideInOut]="animationState">
       <div class="mob_menu">
         <ul class="anchor_nav">
-          <li routerLinkActive="active" (click)="onMenuToggle()"><a routerLink="/">Home</a></li>
+          <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="onMenuToggle()"><a routerLink="/">Home</a></li>
           <li routerLinkActive="active" (click)="onMenuToggle()"><a routerLink="/about">About</a></li>
           <li routerLinkActive="active" (click)="onMenuToggle()"><a routerLink="/projects">Projects</a></li>
           <li routerLinkActive="active" (click)="onMenuToggle()"><a routerLink="/tutorials">Tutorials</a></li>
@@ -61,7 +61,7 @@
 
         <div class="menu_list_wrap">
           <ul class="anchor_nav">
-            <li routerLinkActive="active"><a routerLink="/">Home</a></li>
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/">Home</a></li>
             <li routerLinkActive="active"><a routerLink="/about">About</a></li>
             <li routerLinkActive="active"><a routerLink="/projects">Projects</a></li>
             <li routerLinkActive="active"><a routerLink="/tutorials">Tutorials</a></li>
