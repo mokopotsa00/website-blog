@@ -2389,7 +2389,7 @@ img.svg{
 	.tm_my-right_profile{
 		display: flex;
 		justify-content: center;
-		margin-top: 270px;
+		margin-top: 150px;
 		.profile_wrap{
 			display: block;
 			text-align: left;
@@ -2440,9 +2440,7 @@ img.svg{
 	.tm_portfolio_wrap{padding-right: 20px;}
 	.tm_skills_wrap{padding: 30px 30px 60px;}
 	#contact .tm_title_holder h3{padding-bottom: 20px;}
-	.tm_my-right_profile {
-        margin-top: 235px;
-	}
+	
 	.tm_hero_header_wrap .image_wrap {
 		width: 150px;
     	height: 150px;
@@ -2517,8 +2515,11 @@ img.svg{
 		padding-bottom: 20px;
 	}
 }
-@media only screen and (max-width: 289px){
-	
+@media only screen and (max-width: 328px){
+	.tm_hero_header_wrap .tm_my-right_profile .profile_wrap {
+		padding-top: 0px;
+		margin-top: -8px;
+	}
 }
 
 
