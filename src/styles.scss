@@ -2305,10 +2305,69 @@ img.svg{
 // 		}
 // 	}
 
+.tm_search{
+    position: fixed;
+    z-index: 10;
+    width: 81%;
+    text-align: center;
+    top: 0;
+    padding: 15px 0 5px;
+    background: rgba(7, 23, 55, 0.2);
+    box-shadow: 0px 4px 8px 3px rgba(7, 23, 55, 0.2);
+    .tm_form-group{
+        display: inline;
+        position: relative;
+        label{
+            position: absolute;
+            right: 50px;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0px;
+                top: 10px;
+                bottom: 0;
+                width: 25px;
+                height: 25px;
+                background-image: url('assets/icons/search-input.svg');
+                background-position: center;
+                background-size: cover;
+                cursor: pointer;
+            }     
+        }
+        input{
+            height: 44px;
+            width: 75%;
+            border-radius: 20px;
+            border: 0;
+            outline: none;
+            padding: 0 40px;
+            box-shadow: 1px -3px 20px 1px rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
 
 
 /* Recent media queries */
+@media screen and (max-width: 1400px){
+	.tm_search{
+		width: 79%;
+	}
+}
+@media screen and (max-width: 1200px){
+	.tm_search{
+		width: 75%;
+	}
+}
 @media screen and (max-width: 1040px){
+	.tm_header_wrap {
+		padding: 30px 60px 0 60px;
+	}
+	.tm_search{
+        top: 90px;
+        padding-top: 20px;
+        width: 100%;
+    }
 	.tm_title_holder{
 		padding-bottom: 30px;
 		margin-top: 80px;
@@ -2356,8 +2415,9 @@ img.svg{
 }
 @media only screen and (max-width: 767px){
 	.tm_header_wrap{
-		padding: 110px 30px 0 30px;
+		padding: 65px 30px 0 30px;
 	}
+	
 	.tm_contact_wrap_all{
 		padding: 0 20px;
 	}
@@ -2444,11 +2504,13 @@ img.svg{
 	.tm_hero_header_wrap .tm_my-right_profile{margin-top: 100px;}
 }
 
+@media only screen and (max-width: 439px){
+	.tm_portfolio_wrapper_all .tm_title_holder span{top: 145px;}
+}
 @media only screen and (max-width: 348px){
 	.tm_news_wrap .tm_title_holder span{ top: 140px}
 }
 @media only screen and (max-width: 339px){
-	.tm_portfolio_wrapper_all .tm_title_holder span,
 	#contact .tm_title_holder span{top: 145px;}
 	#contact .tm_title_holder h3{
 		padding-right: 10px;

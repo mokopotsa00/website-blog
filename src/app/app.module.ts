@@ -12,7 +12,8 @@ import { BlogComponent } from './blog/blog.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { FooterComponent } from './footer/footer.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { SearchComponent } from './search/search.component'
+import { SearchComponent } from './search/search.component';
+import { PagePreloaderComponent } from './page-preloader/page-preloader.component'
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SearchComponent } from './search/search.component'
     ContactsComponent,
     FooterComponent,
     NotFoundComponent,
-    SearchComponent
+    SearchComponent,
+    PagePreloaderComponent
   ],
   imports: [
     BrowserModule, AppRoutingModule, BrowserAnimationsModule

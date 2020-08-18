@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { SlideInOutAnimation } from './shared/animation/animation'
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,17 +10,41 @@ import { SlideInOutAnimation } from './shared/animation/animation'
 })
 export class AppComponent implements OnInit{
   isActive = false;
-  isMobileSearch = true;
+  isMobileSearch = false;
+  isSearchActive = false;
+  menuAnimationState = 'out';
+  searchAnimationState = 'out';
+  innerWidth: number;
 
-  animationState = 'out';
+  // @HostListener('window:resize', ['$event']) onResize(event) {
+  //   this.innerWidth = +window.innerWidth;
+  //   if( this.innerWidth > 1040){
+  //     this.isSearchActive = true;
+  //     this.searchAnimationState = "in";
+  //   }
+  //   else{
+  //     this.isSearchActive = false;
+  //     this.searchAnimationState = "out";
+  //   }
+  // }
 
+  constructor( private router: Router){}
   ngOnInit(){
-    setTimeout(() => {
-      (document.querySelector('.tm_preloader') as HTMLElement).classList.add("loaded");
-    }, 1000)
+    this.innerWidth = +window.innerWidth;
+    if( this.innerWidth > 1040){
+      this.isSearchActive = true;
+      this.searchAnimationState = "in";
+    }
+  }
+  onActivate(e){
+    window.scroll(0,0);
   }
   onMenuToggle(){
     this.isActive = !this.isActive;
-    this.animationState = this.animationState === 'out' ? 'in' : 'out';
+    this.menuAnimationState = this.menuAnimationState === 'out' ? 'in' : 'out';
+  }
+  onSearchToggle(){
+    this.isSearchActive = !this.isSearchActive;
+    this.searchAnimationState = this.searchAnimationState === 'out' ? 'in' : 'out';
   }
 }

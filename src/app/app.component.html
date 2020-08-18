@@ -13,7 +13,7 @@
         <a routerLink="/"><img src="../assets/img/logo/mobile_logo.png" alt="" /></a>
       </div>
       <div class="tm_mobile_search">
-        <div class="search-toggle" (click)="isMobileSearch = !isMobileSearch" [ngClass]="isMobileSearch ? 'opened': 'closed'">
+        <div class="search-toggle" (click)="onSearchToggle()" [ngClass]="isSearchActive ? 'opened': 'closed'">
           <span></span>
         </div>
       </div>
@@ -25,7 +25,7 @@
         </div>
       </div>
     </div>
-    <div class="tm_mobile_menu_wrap" [@slideInOut]="animationState">
+    <div class="tm_mobile_menu_wrap" [@slideInOut]="menuAnimationState">
       <div class="mob_menu">
         <ul class="anchor_nav">
           <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="onMenuToggle()"><a routerLink="/">Home</a></li>
@@ -88,16 +88,14 @@
     <!-- RIGHTPART -->
     <div class="tm_rightpart">
       <div class="rightpart_inner">
-         <!-- PRELOADER -->
-        <div class="tm_preloader">
-            <div class="spinner_wrap">
-              <div class="spinner"></div>
-            </div>
-        </div>
-        <!-- /PRELOADER -->
-        
-        <app-search></app-search>
-        <router-outlet></router-outlet>
+        <div class="tm_search" id="search" [@slideInOut]="searchAnimationState">
+          <div class="tm_form-group">
+              <label for="search"></label>
+              <input type="text" name="search" id="search" placeholder="Search..."/>
+          </div>
+      </div>
+
+        <router-outlet (activate)="onActivate($event)"></router-outlet>
         <!-- <app-footer></app-footer> -->
         <app-footer></app-footer>
       </div>
