@@ -1591,7 +1591,7 @@ img.svg{
 .tm_contact_wrap .main_input_wrap .wrap textarea:focus{
 	outline: none;
 }
-.tm_contact_wrap .tm_button a{
+.tm_contact_wrap .tm_button a, .tm_contact_wrap .tm_button button{
 	text-decoration: none;
     color: #fff;
     background-color: #E3872D;
@@ -1601,9 +1601,13 @@ img.svg{
     border-radius: 3px;
     display: inline-block;
     position: relative;
-    overflow: hidden;
+	overflow: hidden;
+	font-size: 16px;
+	border: 0;
+	line-height: 1.8;
+    letter-spacing: 1px;
 }
-.tm_contact_wrap .tm_button a:before{
+.tm_contact_wrap .tm_button a:before, .tm_contact_wrap .tm_button button:before{
 	position: absolute;
     content: "";
     top: 0px;
@@ -1616,8 +1620,8 @@ img.svg{
     transition-duration: .6s;
     z-index: 1;
 }
-.tm_contact_wrap .tm_button a:hover:before{width: 170%;}
-.tm_contact_wrap .tm_button a span{
+.tm_contact_wrap .tm_button a:hover:before, .tm_contact_wrap .tm_button button:hover:before{width: 170%;}
+.tm_contact_wrap .tm_button a span, .tm_contact_wrap .tm_button button span{
 	position: relative;
 	z-index: 2;
 }

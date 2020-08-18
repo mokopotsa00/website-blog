@@ -17,21 +17,22 @@
                 <div class="formbox">
                     <div class="tm_contact_wrap">
                         <div class="main_input_wrap">
-                            <form action="/" method="post" class="contact_form" id="contact_form">
+                            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
                                 <div class="returnmessage"
                                     data-success="Your message has been received, We will contact you soon."></div>
                                 <div class="empty_notice"><span>Please Fill Required Fields</span></div>
                                 <div class="wrap">
-                                    <input id="name" type="text" placeholder="Your Name (Required)">
+                                    <input formControlName="name" id="name" type="text" placeholder="Your Name (Required)">
                                 </div>
                                 <div class="wrap">
-                                    <input id="email" type="text" placeholder="Your Email (Required)">
+                                    <input formControlName="email" id="email" type="text" placeholder="Your Email (Required)">
                                 </div>
                                 <div class="wrap">
-                                    <textarea id="message" placeholder="Your Message"></textarea>
+                                    <textarea formControlName="message" id="message" placeholder="Your Message"></textarea>
                                 </div>
                                 <div class="tm_button">
-                                    <a id="send_message" href="#"><span>Send Message</span></a>
+                                    <!-- <a id="send_message" href="#"><span>Send Message</span></a> <br> -->
+                                    <button type="submit" id="send_message"><span>Send Message</span></button>
                                 </div>
                             </form>
                         </div>
