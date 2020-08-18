@@ -2345,7 +2345,10 @@ img.svg{
         }
     }
 }
-
+.page_not_found{
+	padding: 140px 100px 60px;
+	min-height: 50vh;
+}
 
 
 /* Recent media queries */
@@ -2499,7 +2502,8 @@ img.svg{
 		line-height: 1.5;
 	}
 	.tm_search{top: 50px !important;}
-	.tm_hero_header_wrap .tm_my-right_profile{margin-top: 100px;}
+	.tm_hero_header_wrap .tm_my-right_profile{margin-top: 10px;}
+	.tm_about_wrapper_all h2{margin-top: 0;}
 }
 
 @media only screen and (max-width: 439px){
@@ -2520,8 +2524,15 @@ img.svg{
 		padding-top: 0px;
 		margin-top: -8px;
 	}
+	.tm_hero_header_wrap .tm_my-right_profile{margin-top: 75px;}
+	.page_not_found{
+		padding: 140px 20px 60px;
+		min-height: 50vh;
+	}
 }
-
+@media only screen and (max-width: 288px){
+	.tm_about_wrapper_all .tm_title_holder span{ top: 140px}
+}
 
 
 /* Unavailable section */
