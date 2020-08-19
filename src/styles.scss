@@ -1625,11 +1625,23 @@ img.svg{
 	position: relative;
 	z-index: 2;
 }
+.tm_contact_wrap .main_input_wrap .wrap input.ng-invalid.ng-touched,
+.tm_contact_wrap .main_input_wrap .wrap textarea.ng-invalid.ng-touched{
+    border-bottom: 1px solid red;
+}
 .tm_contact_wrap .empty_notice{
 	color: #BD0A0D;
-	margin-bottom: 7px;
-	display: none;
+	margin-bottom: 13px;
 	text-align: left;
+}
+.message_submitted{
+	margin-left: 30px;
+    color: #fff;
+    background-color: green;
+    font-weight: 600;
+    padding: 12px 35px;
+    border-radius: 3px;
+    display: inline-block;
 }
 .tm_contact_wrap .contact_error{
 	color: rgba(255,0,4,1.00);
@@ -2419,6 +2431,13 @@ img.svg{
 	// .tm_hero_header_wrap {
 	// 	margin-bottom: 160px;
 	// }
+}
+@media only screen and (max-width: 892px){
+	.message_submitted{
+		margin-left: 0;
+		margin-top: 20px;
+		display: table;
+	}
 }
 @media only screen and (max-width: 767px){
 	.tm_header_wrap{

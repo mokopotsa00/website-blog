@@ -8,27 +8,25 @@ import { FormGroup, FormControl, Validators } from '@angular/forms'
 })
 export class ContactsComponent implements OnInit {
   contactForm: FormGroup;
+  successfulSendMessage = false;
   constructor() { }
 
   ngOnInit(): void {
-    this.initForm();
+    this.contactForm = new FormGroup({
+      'name': new FormControl( '', Validators.required),
+      'email': new FormControl( '', [Validators.required, Validators.email]),
+      'message': new FormControl( '', Validators.required)
+    });
   }
 
   onSubmit(){
-    console.log(this.contactForm.value);
-    console.log(this.contactForm);
-    this.contactForm.reset;
-  }
-
-  private initForm(){
-    let name = '';
-    let email = '';
-    let message = ''
-
-    this.contactForm = new FormGroup({
-      'name': new FormControl( name, Validators.required),
-      'email': new FormControl( email, [Validators.required, Validators.email]),
-      'message': new FormControl( message, [Validators.required])
-    });
+    if( !this.contactForm.valid){
+      this.contactForm.get('name').markAsTouched();
+      this.contactForm.get('email').markAsTouched();
+      this.contactForm.get('message').markAsTouched();
+      return;
+    }
+    this.contactForm.reset();
+    this.successfulSendMessage = true;
   }
 }
