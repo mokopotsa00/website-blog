@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RecaptchaModule, RecaptchaFormsModule  } from 'ng-recaptcha';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -31,9 +32,15 @@ import { PagePreloaderComponent } from './page-preloader/page-preloader.componen
     PagePreloaderComponent
   ],
   imports: [
-    BrowserModule, AppRoutingModule, BrowserAnimationsModule, ReactiveFormsModule
+    BrowserModule, 
+    AppRoutingModule, 
+    BrowserAnimationsModule, 
+    ReactiveFormsModule,
+    RecaptchaFormsModule,
+    RecaptchaModule,
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

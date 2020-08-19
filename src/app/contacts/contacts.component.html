@@ -27,6 +27,12 @@
                                     <span>Please Fill in Your {{(!contactForm.get('name').valid && contactForm.get('name').touched) ? 'Name' : 
                                         (!contactForm.get('email').valid && contactForm.get('email').touched)? 'Email': 'Message'}}</span>
                                 </div>
+                                <div class="empty_notice"
+                                    *ngIf="(contactForm.get('name').valid && contactForm.get('email').valid && contactForm.get('message').valid) &&
+                                        (!contactForm.get('recaptcha').valid && contactForm.get('recaptcha').touched)
+                                    ">
+                                    <span>Please prove below that you are not a robot</span>
+                                </div>
                                 <div class="wrap">
                                     <input formControlName="name" id="name" type="text" placeholder="Your Name (Required)">
                                 </div>
@@ -35,6 +41,9 @@
                                 </div>
                                 <div class="wrap">
                                     <textarea formControlName="message" id="message" placeholder="Your Message (Required)"></textarea>
+                                </div>
+                                <div class="wrap">
+                                    <re-captcha class="tm_recaptcha" formControlName="recaptcha" siteKey="6LcyGcEZAAAAAMrP9oJFn-IHcq03a18PAxG-SkhU"></re-captcha>
                                 </div>
                                 <div class="tm_button">
                                     <!-- <a id="send_message" href="#"><span>Send Message</span></a> -->
