@@ -43,12 +43,13 @@
                                     <textarea formControlName="message" id="message" placeholder="Your Message (Required)"></textarea>
                                 </div>
                                 <div class="wrap">
-                                    <re-captcha class="tm_recaptcha" formControlName="recaptcha" siteKey="6LcyGcEZAAAAAMrP9oJFn-IHcq03a18PAxG-SkhU"></re-captcha>
+                                    <re-captcha class="tm_recaptcha" formControlName="recaptcha" siteKey="6Le4HsEZAAAAAHdbA-oaAHNnEvRChWJLus3b3yjx"></re-captcha>
                                 </div>
                                 <div class="tm_button">
                                     <!-- <a id="send_message" href="#"><span>Send Message</span></a> -->
                                     <button type="submit" id="send_message"><span>Send Message</span></button>
-                                    <div *ngIf="successfulSendMessage" class="message_submitted" >Your message is sent. I will contact you via your email.</div>
+                                    <!-- <div *ngIf="successfulSendMessage" class="tm_message_submitted" >Your message is sent. I will contact you via your email.</div> -->
+                                    <div class="tm_message_cannot_send">Your message cannot be sent. There is a temporary problem with reciever...</div>
                                 </div>
                             </form>
                         </div>
