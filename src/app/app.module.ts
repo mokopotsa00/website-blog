@@ -15,7 +15,9 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { FooterComponent } from './footer/footer.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SearchComponent } from './search/search.component';
-import { PagePreloaderComponent } from './page-preloader/page-preloader.component'
+import { PagePreloaderComponent } from './page-preloader/page-preloader.component';
+import { SingleProjectComponent } from './projects/single-project/single-project.component';
+import { ProjectService } from './projects/project.service'
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { PagePreloaderComponent } from './page-preloader/page-preloader.componen
     FooterComponent,
     NotFoundComponent,
     SearchComponent,
-    PagePreloaderComponent
+    PagePreloaderComponent,
+    SingleProjectComponent,
   ],
   imports: [
     BrowserModule, 
@@ -40,6 +43,7 @@ import { PagePreloaderComponent } from './page-preloader/page-preloader.componen
     RecaptchaModule,
   ],
   providers: [
+    ProjectService
   ],
   bootstrap: [AppComponent]
 })

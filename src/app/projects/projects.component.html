@@ -15,10 +15,10 @@
             <div class="tm_portfolio_wrap">
                 <div class="tm_portfolio_titles"></div>
                 <ul class="tm_portfolio_filter">
-                    <li><a href="#" class="current" data-filter="*">All</a></li>
-                    <li><a href="#" data-filter=".design">Design</a></li>
-                    <li><a href="#" data-filter=".photography"> Web Apps</a></li>
-                    <li><a href="#" data-filter=".development">Mobile Apps</a></li>
+                    <li><a (click)="onFilter($event)" class="tm_filter_link current" data-filter="*">All</a></li>
+                    <li><a (click)="onFilter($event)" class="tm_filter_link" data-filter="design">Design</a></li>
+                    <li><a (click)="onFilter($event)" class="tm_filter_link" data-filter="photography"> Web Apps</a></li>
+                    <li><a (click)="onFilter($event)" class="tm_filter_link" data-filter="development">Mobile Apps</a></li>
                 </ul>
                 <!-- <div class="coming-soon">
                     <div class="coming-soon-text">
@@ -27,108 +27,25 @@
                     </div>
                 </div> -->
                 <ul class="tm_portfolio_list gallery_zoom">
-                    <li class="design">
-                        <div class="entry tm_portfolio_animation_wrap" data-title="Aoc Productions" data-category="Design">
-                            <a href="portfolio-single.html">
+
+                    <li *ngFor="let project of projects" class="tm_portfolio_list-item {{project.category}}">
+                        <div class="entry tm_portfolio_animation_wrap">
+                            <a routerLink="./{{project.slug}}">
                                 <img src="../../assets/img/portfolio/600x600.jpg" alt="" />
-                                <div class="tm_portfolio_image_main" style="background-image:url(../../assets/img/portfolio/1.jpg)"></div>
+                                <div class="tm_portfolio_image_main" style="background-image:url({{project.featuredImage}})"></div>
                             </a>
                         </div>
-                        <a href="#"  >
+                        <a routerLink="./{{project.slug}}">
                             <div class="tm_portfolio_project_content">
                                 <div class="tm_inner_portfolio_project_content">
                                     <h4> 
-                                        The real application using latest angular 7 on front-end 
+                                        {{project.title}}
                                     </h4> 
                                 </div>
                             </div>
                         </a>
                     </li>
-                    <li class="photography">
-                        <div class="entry tm_portfolio_animation_wrap" data-title="Ind Hed" data-category="Photography">
-                            <a href="portfolio-single-2.html">
-                                <img src="../../assets/img/portfolio/600x600.jpg" alt="" />
-                                <div class="tm_portfolio_image_main" style="background-image:url(../../assets/img/portfolio/2.jpg)"></div>
-                            </a>
-                        </div>
-                        <a href="#"  >
-                            <div class="tm_portfolio_project_content">
-                                <div class="tm_inner_portfolio_project_content">
-                                    <h4> 
-                                        website template
-                                    </h4> 
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="development">
-                        <div class="entry tm_portfolio_animation_wrap" data-title="Paper Mockup" data-category="Development">
-                            <a href="portfolio-single-3.html">
-                                <img src="../../assets/img/portfolio/600x600.jpg" alt="" />
-                                <div class="tm_portfolio_image_main" style="background-image:url(../../assets/img/portfolio/3.jpg)"></div>
-                            </a>
-                        </div>
-                        <a href="#"  >
-                            <div class="tm_portfolio_project_content">
-                                <div class="tm_inner_portfolio_project_content">
-                                    <h4> 
-                                        Real CURD application using Node at the back-end and Angular-4 at the front-end
-                                    </h4> 
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="photography">
-                        <div class="entry tm_portfolio_animation_wrap" data-title="The Nordic" data-category="Photography">
-                            <a href="portfolio-single-4.html">
-                                <img src="../../assets/img/portfolio/600x600.jpg" alt="" />
-                                <div class="tm_portfolio_image_main" style="background-image:url(../../assets/img/portfolio/4.jpg)"></div>
-                            </a>
-                        </div>
-                        <a href="#"  >
-                            <div class="tm_portfolio_project_content">
-                                <div class="tm_inner_portfolio_project_content">
-                                    <h4> 
-                                        APIs build on C# .Net Core for managing the sharing and storing of files 
-                                    </h4> 
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="design">
-                        <div class="entry tm_portfolio_animation_wrap" data-title="Creatives Castle" data-category="Design">
-                            <a href="portfolio-single-5.html">
-                                <img src="../../assets/img/portfolio/600x600.jpg" alt="" />
-                                <div class="tm_portfolio_image_main" style="background-image:url(../../assets/img/portfolio/5.jpg)"></div>
-                            </a>
-                        </div>
-                        <a href="#"  >
-                            <div class="tm_portfolio_project_content">
-                                <div class="tm_inner_portfolio_project_content">
-                                    <h4> 
-                                        Web app build with .Net MVC 
-                                    </h4> 
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="photography">
-                        <div class="entry tm_portfolio_animation_wrap" data-title="White Bag" data-category="Photography">
-                            <a href="portfolio-single-6.html">
-                                <img src="../../assets/img/portfolio/600x600.jpg" alt="" />
-                                <div class="tm_portfolio_image_main" style="background-image:url(../../assets/img/portfolio/6.jpg)"></div>
-                            </a>
-                        </div>
-                        <a href="#"  >
-                            <div class="tm_portfolio_project_content">
-                                <div class="tm_inner_portfolio_project_content">
-                                    <h4> 
-                                        POS in .Net
-                                    </h4> 
-                                </div>
-                            </div>
-                        </a>
-                    </li>
+                    
                 </ul>
             </div>
         </div>
