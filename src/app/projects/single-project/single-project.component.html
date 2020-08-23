@@ -5,7 +5,7 @@
             <swiper class="swiper-container" fxFlex="auto" [config]="config">
                 <div *ngFor="let slide of slides" class="swiper-slide">
                     <div class="tm_single_project-featuredImage">
-                        <img src="{{slide}}" width="100%" alt="{{project.title}}" />
+                        <lib-ngx-image-zoom [thumbImage]=slide [fullImage]=slide></lib-ngx-image-zoom>
                     </div>
                 </div>
               </swiper>
@@ -31,12 +31,19 @@
         </div>
     </div>
     <div class="tm_single_project-desc">
-        <h3>Description</h3>
+        <h3>Description:</h3>
         <div class="tm_single_project-description">
             {{project.content}}
         </div>
     </div>
-    <div class="tm_single-project-demo">
-
-    </div>
+    <!-- <div class="tm_single-project-demo">
+        <h3>Demo:</h3>
+        <div class="buttons_wrap">
+            <ul>
+                <li class="anchor">
+                    <a routerLink="/projects"><span>Live Demo</span></a>
+                </li>
+            </ul>
+        </div>
+    </div> -->
 </div>

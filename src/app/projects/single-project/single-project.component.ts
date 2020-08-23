@@ -13,6 +13,8 @@ import { Project } from '../project.model';
 export class SingleProjectComponent implements OnInit {
   project: Project;
   projectSlug: string;
+  myThumbnail="https://wittlock.github.io/ngx-image-zoom/assets/thumb.jpg";
+  myFullresImage="https://wittlock.github.io/ngx-image-zoom/assets/fullres.jpg";
   public slides = [];
 
   constructor( private projectServce: ProjectService, private route: ActivatedRoute) { }
@@ -22,7 +24,7 @@ export class SingleProjectComponent implements OnInit {
       this.projectSlug = params['slug'];
       this.project = this.projectServce.getProject(this.projectSlug);
       this.slides = [
-        this.project.featuredImage,
+        "../../../assets/img/my-site.PNG",
         this.project.featuredImage,
         this.project.featuredImage,
         this.project.featuredImage,
