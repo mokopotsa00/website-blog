@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import { SwiperConfigInterface, SwiperScrollbarInterface, SwiperPaginationInterface, SwiperDirective } from 'ngx-swiper-wrapper';
+
+import { ProjectService } from '../project.service';
+import { Project } from '../project.model';
 
 @Component({
   selector: 'app-single-project',
@@ -6,10 +11,41 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./single-project.component.scss']
 })
 export class SingleProjectComponent implements OnInit {
+  project: Project;
+  projectSlug: string;
+  public slides = [];
 
-  constructor() { }
+  constructor( private projectServce: ProjectService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.route.params.subscribe((params: Params) => {
+      this.projectSlug = params['slug'];
+      this.project = this.projectServce.getProject(this.projectSlug);
+      this.slides = [
+        this.project.featuredImage,
+        this.project.featuredImage,
+        this.project.featuredImage,
+        this.project.featuredImage,
+        this.project.featuredImage,
+      ];
+    })
   }
+
+  public disabled: boolean = false;
+
+  public config: SwiperConfigInterface = {
+    a11y: true,
+    direction: 'horizontal',
+    slidesPerView: 1,
+    keyboard: true,
+    mousewheel: true,
+    scrollbar: false,
+    navigation: true,
+    pagination:{
+      el: '.swiper-pagination',
+      clickable: true,
+    }
+  };
+
 
 }

@@ -13,6 +13,8 @@
         <div class="tm_second_portfolio">
         <div class="container">
             <div class="tm_portfolio_wrap">
+                <p *ngIf="isPrevRouteIncorrect" style="color: red">The link project is not found</p>
+                
                 <div class="tm_portfolio_titles"></div>
                 <ul class="tm_portfolio_filter">
                     <li><a (click)="onFilter($event)" class="tm_filter_link current" data-filter="*">All</a></li>

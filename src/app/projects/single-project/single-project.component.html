@@ -1,1 +1,42 @@
-<p>single-project works!</p>
+<div class="tm_single-project">
+    <h2>{{project.title}}</h2>
+    <div class="tm_single_project-image_text">
+        <div class="tm_single_project-right_image">
+            <swiper class="swiper-container" fxFlex="auto" [config]="config">
+                <div *ngFor="let slide of slides" class="swiper-slide">
+                    <div class="tm_single_project-featuredImage">
+                        <img src="{{slide}}" width="100%" alt="{{project.title}}" />
+                    </div>
+                </div>
+              </swiper>
+              <div class="tm_img_pagination">
+                <div class="tm_single_project-screenshots">
+                    <img *ngFor="let slide of slides" src="{{slide}}" />
+                    <!-- <img src="{{project.featuredImage}}" />
+                    <img src="{{project.featuredImage}}" />
+                    <img src="{{project.featuredImage}}" />
+                    <img src="{{project.featuredImage}}" /> -->
+                </div>
+              </div>
+              
+
+        </div>
+        <div class="tm_single_project-left_text">
+            <div class="tm_single_project-summary">
+                {{project.excerpt}}
+            </div>
+            <div class="tm_single_project-meta">
+                <span>Category:</span> <span>Tags:</span>
+            </div>
+        </div>
+    </div>
+    <div class="tm_single_project-desc">
+        <h3>Description</h3>
+        <div class="tm_single_project-description">
+            {{project.content}}
+        </div>
+    </div>
+    <div class="tm_single-project-demo">
+
+    </div>
+</div>

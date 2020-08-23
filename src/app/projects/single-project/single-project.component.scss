@@ -1,0 +1,28 @@
+.tm_single-project{
+    min-height: 60.7vh;
+    padding: 90px 60px 20px;
+}
+.tm_single_project-image_text{ 
+    display: flex;
+    padding-bottom: 30px;
+} 
+.tm_single_project-right_image{
+    max-width: 650px;
+}
+.tm_single_project-summary{
+    min-height: 100px;
+    padding-bottom: 30px;
+}
+.tm_single_project-left_text{
+    padding-top:0;
+    padding-left: 30px;
+}
+
+.tm_single_project-meta span{
+    font-weight: bold;
+    margin-right: 10px;
+    &:last-child{
+        margin-left: 30px;
+    }
+}
+

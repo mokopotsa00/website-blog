@@ -2060,7 +2060,48 @@ img.svg{
 a.tm_filter_link {
     cursor: pointer;
 }
-/*---------------------------------------------------*/
+.tm_img_pagination{position: relative;}
+.tm_single_project-screenshots{
+	padding-top: 10px;
+	position: absolute;
+    top: -100px;
+    img{
+        width: 110px;
+        margin-right: 10px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
+
+.swiper-container-horizontal .swiper-pagination-bullets, 
+.swiper-pagination-custom, .swiper-pagination-fraction{
+    position: relative;
+    margin-top: 20px;
+    text-align: left;
+}
+swiper>.swiper.s-wrapper .swiper-pagination .swiper-pagination-handle{
+	width: 110px;
+	height: 71.5px;
+	margin: 0px !important;
+	margin-right: 10px !important;
+	padding: 0 !important;
+	// background: gray;
+	opacity: 0.3 !important;
+	&:last-child{
+		margin-right: 0;
+	}
+	&:hover{
+		opacity: 0 !important;
+	}
+}
+.swiper-pagination-clickable .swiper-pagination-bullet {
+	width: 100% !important;
+	height: 100% !important;
+	border-radius: 0 !important;
+}
+.swiper-button-next,.swiper-button-prev{ display: none !important;}
+/*-------------------------*/
 /*	  MOBILE HEADER
 /*---------------------------------------------------*/
 

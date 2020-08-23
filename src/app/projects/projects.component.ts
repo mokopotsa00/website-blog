@@ -8,12 +8,13 @@ import { Project } from './project.model'
 })
 export class ProjectsComponent implements OnInit {
   projects: Project[];
+  isPrevRouteIncorrect = false;
 
   constructor( private projectService: ProjectService) { }
 
   ngOnInit(): void {
     this.projects = this.projectService.getProjects();
-    console.log(this.projects);
+    this.isPrevRouteIncorrect = this.projectService.isValidProjectSlug;
   }
 
   onFilter(event){
