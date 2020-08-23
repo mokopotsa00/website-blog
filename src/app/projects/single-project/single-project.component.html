@@ -1,4 +1,4 @@
-<div class="tm_single-project">
+<div *ngIf="project !== undefined" class="tm_single-project">
     <h2>{{project.title}}</h2>
     <div class="tm_single_project-image_text">
         <div class="tm_single_project-right_image">
@@ -6,6 +6,7 @@
                 <div *ngFor="let slide of slides" class="swiper-slide">
                     <div class="tm_single_project-featuredImage">
                         <lib-ngx-image-zoom [thumbImage]=slide [fullImage]=slide></lib-ngx-image-zoom>
+                        <!-- <img src="{{slide}}" width="100%"/> -->
                     </div>
                 </div>
               </swiper>

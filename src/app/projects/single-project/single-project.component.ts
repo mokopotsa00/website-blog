@@ -1,6 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
-import { SwiperConfigInterface, SwiperScrollbarInterface, SwiperPaginationInterface, SwiperDirective } from 'ngx-swiper-wrapper';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params, Router } from '@angular/router';
+import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 
 import { ProjectService } from '../project.service';
 import { Project } from '../project.model';
@@ -10,26 +10,37 @@ import { Project } from '../project.model';
   templateUrl: './single-project.component.html',
   styleUrls: ['./single-project.component.scss']
 })
-export class SingleProjectComponent implements OnInit {
+export class SingleProjectComponent implements OnInit{
   project: Project;
   projectSlug: string;
-  myThumbnail="https://wittlock.github.io/ngx-image-zoom/assets/thumb.jpg";
-  myFullresImage="https://wittlock.github.io/ngx-image-zoom/assets/fullres.jpg";
+  myThumbnail = "https://wittlock.github.io/ngx-image-zoom/assets/thumb.jpg";
+  myFullresImage = "https://wittlock.github.io/ngx-image-zoom/assets/fullres.jpg";
   public slides = [];
 
-  constructor( private projectServce: ProjectService, private route: ActivatedRoute) { }
+  constructor(private projectServce: ProjectService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
       this.projectSlug = params['slug'];
-      this.project = this.projectServce.getProject(this.projectSlug);
-      this.slides = [
-        "../../../assets/img/my-site.PNG",
-        this.project.featuredImage,
-        this.project.featuredImage,
-        this.project.featuredImage,
-        this.project.featuredImage,
-      ];
+      let results = this.projectServce.getProject(this.projectSlug);
+      if (results === undefined) {
+        this.router.navigate(['projects']);
+      }
+      else{
+        if (results.slug !== '') {
+          this.router.navigate(['../' + results.slug], {
+            relativeTo: this.route
+          });
+        }
+        this.project = results.project;
+        this.slides = [
+          this.project.featuredImage,
+          this.project.featuredImage,
+          this.project.featuredImage,
+          this.project.featuredImage,
+          this.project.featuredImage,
+        ];
+      }
     })
   }
 
@@ -43,11 +54,9 @@ export class SingleProjectComponent implements OnInit {
     mousewheel: true,
     scrollbar: false,
     navigation: true,
-    pagination:{
+    pagination: {
       el: '.swiper-pagination',
       clickable: true,
     }
   };
-
-
 }
