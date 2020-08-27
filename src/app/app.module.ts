@@ -8,6 +8,7 @@ import { SwiperModule } from 'ngx-swiper-wrapper';
 import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { NgxImageZoomModule } from 'ngx-image-zoom';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -53,6 +54,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     RecaptchaModule,
     SwiperModule,
     NgxImageZoomModule,
+    NgxDatatableModule
   ],
   providers: [
     {

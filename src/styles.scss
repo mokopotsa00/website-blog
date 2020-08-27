@@ -8,6 +8,9 @@
 /*---------------------------------------------------*/
 /*	01)  BASE
 /*---------------------------------------------------*/
+@import '~@swimlane/ngx-datatable/index.css';
+@import '~@swimlane/ngx-datatable/themes/material.scss';
+@import '~@swimlane/ngx-datatable/assets/icons.css';
 
 html {
 	overflow-x: hidden;
@@ -1515,7 +1518,7 @@ img.svg{
 /* CONTACT
 /*---------------------------------------------------*/
 
-.tm_contact_wrap_all{
+.tm_contact_wrap_all, .tm_response_wrap_all{
 	width: 100%;
 	height: auto;
 	clear: both;
@@ -1536,7 +1539,7 @@ img.svg{
 	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
 			box-sizing: border-box; /* Opera/IE 8+ */		
 }
-.tm_contact_wrap{
+.tm_contact_wrap, .tm_response_wrap{
 	max-width: 830px;
 	height: auto;
 	
@@ -1549,12 +1552,12 @@ img.svg{
 	margin-bottom: 69px;
 }
 .tm_contact_wrap .subtitle p{color: #333;}
-.tm_contact_wrap .main_input_wrap{
+.tm_contact_wrap .main_input_wrap, .main_table_wrap{
 	margin-bottom: 30px;
 	position: relative;
 	top: -24px;
 }
-.tm_contact_wrap .main_input_wrap,
+.tm_contact_wrap .main_input_wrap,.main_table_wrap,
 .tm_contact_wrap .main_input_wrap .wrap{
 	width: 100%;
 	height: auto;
@@ -2497,7 +2500,7 @@ swiper>.swiper.s-wrapper .swiper-pagination .swiper-pagination-handle{
 		padding: 65px 30px 0 30px;
 	}
 	
-	.tm_contact_wrap_all{
+	.tm_contact_wrap_all, .tm_response_wrap_all{
 		padding: 0 20px;
 	}
 	.tm_portfolio_filter li {
