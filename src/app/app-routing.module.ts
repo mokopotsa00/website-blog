@@ -7,8 +7,8 @@ import { MySkillsComponent } from './my-skills/my-skills.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { BlogComponent } from './blog/blog.component';
-import { NotFoundComponent } from './not-found/not-found.component';
 import { SingleProjectComponent } from './projects/single-project/single-project.component';
+import { SearchResponse } from './search-response/search-response.component';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent},
@@ -19,7 +19,8 @@ const appRoutes: Routes = [
     { path: 'projects/:slug', component: SingleProjectComponent},
     { path: 'blog', component: BlogComponent },
     { path: 'contacts', component: ContactsComponent },
-    { path: '**', component: NotFoundComponent}
+    { path: ':slug', component: SearchResponse},
+    { path: '**', component: SearchResponse}
 ]
 @NgModule({
     imports: [ 

@@ -19,11 +19,10 @@ import { BlogComponent } from './blog/blog.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { FooterComponent } from './footer/footer.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { SearchComponent } from './search/search.component';
+import { SearchResponse } from './search-response/search-response.component';
 import { PagePreloaderComponent } from './page-preloader/page-preloader.component';
 import { SingleProjectComponent } from './projects/single-project/single-project.component';
 import { ProjectService } from './projects/project.service';
-import { NotFoundArticleComponent } from './not-found-article/not-found-article.component'
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -41,10 +40,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ContactsComponent,
     FooterComponent,
     NotFoundComponent,
-    SearchComponent,
+    SearchResponse,
     PagePreloaderComponent,
     SingleProjectComponent,
-    NotFoundArticleComponent,
   ],
   imports: [
     BrowserModule, 
