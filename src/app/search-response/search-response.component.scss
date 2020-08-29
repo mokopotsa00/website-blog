@@ -1,9 +1,19 @@
-.tm_search-response{
-    min-height: 74.6vh;
-    h3{
-        text-transform: initial;
+  
+ 
+  td, th {
+   
+    &:nth-child(1){
+        width: 30%;
     }
-}
+    &:nth-child(2){
+        width: 50%
+    }
+    &:nth-child(3){
+        width: 14%;
+    }
+  }
+
+
 
 @media (max-width: 1200px) {
 

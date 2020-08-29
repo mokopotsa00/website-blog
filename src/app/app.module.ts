@@ -8,7 +8,12 @@ import { SwiperModule } from 'ngx-swiper-wrapper';
 import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { NgxImageZoomModule } from 'ngx-image-zoom';
-import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatFormFieldModule  } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table' 
+import { MatPaginatorModule } from '@angular/material/paginator'; 
+import {MatSortModule} from '@angular/material/sort';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -54,7 +59,13 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     RecaptchaModule,
     SwiperModule,
     NgxImageZoomModule,
-    NgxDatatableModule
+
+    MatSliderModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [
     {

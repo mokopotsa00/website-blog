@@ -8,9 +8,6 @@
 /*---------------------------------------------------*/
 /*	01)  BASE
 /*---------------------------------------------------*/
-@import '~@swimlane/ngx-datatable/index.css';
-@import '~@swimlane/ngx-datatable/themes/material.scss';
-@import '~@swimlane/ngx-datatable/assets/icons.css';
 
 html {
 	overflow-x: hidden;
@@ -604,7 +601,7 @@ img.svg{
 	font-family: "Noto Sans HK", sans-serif;
 	padding-left: 25px;
 	position: absolute;
-    top: 100px;
+    top: 105px;
 }
 .tm_header_wrap{
 	padding: 90px 60px 0 60px;
@@ -2649,3 +2646,117 @@ swiper>.swiper.s-wrapper .swiper-pagination .swiper-pagination-handle{
 	  opacity: 0;
 	}
   }
+
+
+.mat-form-field-flex {
+    border-bottom: 1px solid #0a0425 !important;
+}
+.mat-form-field-appearance-legacy .mat-form-field-label {
+    color: #7d7d7d;
+}
+thead{
+	tr{
+		background:rgba(7, 23, 55, 0.12) !important
+	}
+}
+tbody{
+  tr{
+	  &:nth-child(odd){
+		  box-shadow: 0px 0px 1px rgba(7, 23, 55, 0.2);
+	  }
+	  &:nth-child(even){
+		  background: rgba(7, 23, 55, 0.02);
+	  } 
+	  &:hover{
+		  background: rgba(7, 23, 55, 0.06);
+	  }
+   } 
+}
+
+.mat-select-panel {
+    background: transparent;
+    background-image: linear-gradient(190deg, #0c687b, #0a1937);
+}
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+    color: #E3872D;
+}
+.mat-table {
+    font-family: 'Noto Sans HK', sans-serif;
+	
+}
+.mat-cell, .mat-footer-cell {
+	font-size: 16px;
+}
+.mat-paginator, .mat-paginator-page-size .mat-select-trigger {
+	font-family: 'Noto Sans HK', sans-serif;
+	font-size: 14px;
+}
+.mat-form-field {
+	font-family: 'Noto Sans HK', sans-serif;
+}
+.mat-form-field.mat-focused.mat-primary .mat-select-arrow,.mat-form-field.mat-focused .mat-form-field-label {
+    color: #E3872D;
+}
+.mat-form-field.mat-focused .mat-form-field-ripple {
+    background-color: #E3872D;
+}
+.tm_response_wrap{
+    max-width: 100%;
+    min-width: 100%;
+}
+.tm_search-response{
+    min-height: 74.6vh;
+    h3{
+        text-transform: initial;
+    }
+}
+.mat-form-field{
+    font-family: "Noto Sans HK", sans-serif;
+}
+
+.mat-header-cell{
+    font-family: "Noto Sans HK", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+.mat-header-cell,.mat-cell, .mat-footer-cell {
+    color: #000;
+}
+th.tm_th-link{
+	color: blue;
+}
+.mat-table{
+    background: #fff;
+}
+.mat-paginator {
+    background: transparent;
+    background-image: linear-gradient(190deg, #0c687b, #0a1937);
+}
+table.mat-table {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .mat-icon-button .mat-paginator-icon {
+    width: 30px;
+	height: 30px;
+	&:hover{
+		color: #E3872D;
+	}
+}
+.mat-icon-button.mat-button-disabled .mat-paginator-icon{
+	&:hover{
+		color: rgba(255,255,255,.3);
+	}
+}
+.mat-sort-header-arrow {
+    color: #E3872D;
+}
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+
+
+// .mat-sort-header-arrow.ng-trigger.ng-trigger-arrowPosition.ng-star-inserted {
+//     opacity: 1 !important;
+// }
