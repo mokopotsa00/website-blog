@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SlideInOutAnimation } from './shared/animation/animation'
 import { Router} from '@angular/router';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -26,7 +26,7 @@ export class AppComponent implements OnInit{
       this.searchAnimationState = "in";
     }
 
-    this.searchForm = new FormGroup({ 'searchText': new FormControl(null) });
+    this.searchForm = new FormGroup({ 'searchText': new FormControl('', Validators.required) });
   }
   //scroll to top
   onActivate(e){
@@ -42,7 +42,7 @@ export class AppComponent implements OnInit{
   }
 
   onSubmit(){
-    console.log("submited");
-    console.log( this.searchForm);
+    let searchvalue = this.searchForm.value.searchText;
+    this.router.navigate(['/blog/'+searchvalue]);
   }
 }

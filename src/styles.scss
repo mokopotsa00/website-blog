@@ -2404,32 +2404,51 @@ swiper>.swiper.s-wrapper .swiper-pagination .swiper-pagination-handle{
     .tm_form-group{
         display: inline;
         position: relative;
-        label{
+        .tm_btn_search{
             position: absolute;
-            right: 50px;
+			right: 25px;
+			top: -5px;
+			border: 0;
+			background: #fff;
+			width: 40px;
+			height: 35px;
             &::before {
                 content: "";
                 position: absolute;
-                left: 0px;
-                top: 10px;
+                left: 8px;
+                top: 5px;
                 bottom: 0;
                 width: 25px;
                 height: 25px;
                 background-image: url('assets/icons/search-input.svg');
                 background-position: center;
                 background-size: cover;
-                cursor: pointer;
             }     
-        }
+		}
+		.tm_btn_search.tm_valid_search{
+			cursor: pointer;
+			&::before {
+				background-image: url('assets/icons/search-input-active.svg');
+			}
+			&:hover{
+				border-radius: 5px;
+				background: rgba(7, 23, 55, 0.02);
+			}
+		}
         input{
-            height: 44px;
+            height: 40px;
             width: 75%;
             border-radius: 20px;
-            border: 0;
+            border: 1px solid transparent;
             outline: none;
             padding: 0 40px;
-            box-shadow: 1px -3px 20px 1px rgba(0, 0, 0, 0.2);
-        }
+			box-shadow: 1px -3px 20px 1px rgba(0, 0, 0, 0.2);
+			caret-color: #E3872D;
+			&:focus{
+				border: 1px solid #E3872D;
+			}
+		}
+		
     }
 }
 .page_not_found{

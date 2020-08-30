@@ -91,7 +91,8 @@
             <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
               <div class="tm_form-group">
                   <label type="submit" for="search"></label>
-                  <input type="text" name="search" id="search" autocomplete="off" placeholder="Search..."/>
+                  <input type="text" name="searchText" formControlName="searchText" id="search" autocomplete="off" placeholder="Search..."/>
+                  <button type="submit" class="tm_btn_search" [ngClass]="{'tm_valid_search': searchForm.get('searchText').valid}" [disabled]="searchForm.invalid"></button>
               </div>
             </form>
       </div>

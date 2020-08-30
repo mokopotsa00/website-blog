@@ -1,6 +1,6 @@
 <app-page-preloader></app-page-preloader>
 
-<div class="tm_section" id="blog">
+<div *ngIf="post" class="tm_section" id="blog">
     <div class="tm_news_wrap">
         <div class="tm_header_wrap">
             <div class="tm_title_holder contact">
@@ -16,7 +16,6 @@
                     </div>
                 </div>
                 <div class="tm_single_blog_content" [innerHTML]="post.content">
-                   
                 </div>
             </div>
         </div>
