@@ -1,0 +1,24 @@
+<app-page-preloader></app-page-preloader>
+
+<div class="tm_section" id="blog">
+    <div class="tm_news_wrap">
+        <div class="tm_header_wrap">
+            <div class="tm_title_holder contact">
+                <h3> {{post.title}} </h3>
+                <span>Updated on {{post.date}}</span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="tm_single_content_wrap">
+                <div class="tm_single_blog_image-wrap">
+                    <div class="tm_blog_image">
+                        <img src="{{post.featuredImage}}" atl="" />
+                    </div>
+                </div>
+                <div class="tm_single_blog_content" [innerHTML]="post.content">
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

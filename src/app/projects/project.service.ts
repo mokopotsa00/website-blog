@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core'
 
 import { Project } from './project.model'
-import { Subject } from 'rxjs';
 import { Router } from '@angular/router';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 export class ProjectService{
     public isInvalidProjectSlug: boolean = false;
 

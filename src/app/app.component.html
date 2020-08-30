@@ -88,10 +88,12 @@
     <div class="tm_rightpart">
       <div class="rightpart_inner">
         <div class="tm_search" id="search" [@slideInOut]="searchAnimationState">
-          <div class="tm_form-group">
-              <label for="search"></label>
-              <input type="text" name="search" id="search" autocomplete="off" placeholder="Search..."/>
-          </div>
+            <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+              <div class="tm_form-group">
+                  <label type="submit" for="search"></label>
+                  <input type="text" name="search" id="search" autocomplete="off" placeholder="Search..."/>
+              </div>
+            </form>
       </div>
 
         <router-outlet (activate)="onActivate($event)"></router-outlet>

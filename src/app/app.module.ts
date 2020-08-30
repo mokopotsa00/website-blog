@@ -19,7 +19,6 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { AboutMeComponent } from './about-me/about-me.component';
-import { MySkillsComponent } from './my-skills/my-skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { BlogComponent } from './blog/blog.component';
 import { ContactsComponent } from './contacts/contacts.component';
@@ -28,7 +27,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { SearchResponse } from './search-response/search-response.component';
 import { PagePreloaderComponent } from './page-preloader/page-preloader.component';
 import { SingleProjectComponent } from './projects/single-project/single-project.component';
-import { ProjectService } from './projects/project.service';
+import { SingleBlogComponent } from './blog/single-blog/single-blog.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -40,7 +39,6 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     AppComponent,
     HomeComponent,
     AboutMeComponent,
-    MySkillsComponent,
     ProjectsComponent,
     BlogComponent,
     ContactsComponent,
@@ -49,6 +47,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     SearchResponse,
     PagePreloaderComponent,
     SingleProjectComponent,
+    SingleBlogComponent,
   ],
   imports: [
     BrowserModule, 
@@ -71,8 +70,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     {
       provide: SWIPER_CONFIG,
       useValue: DEFAULT_SWIPER_CONFIG
-    },
-    ProjectService
+    }
   ],
   bootstrap: [AppComponent]
 })
